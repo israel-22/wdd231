@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Santos Israel" />
+    <meta name="description" content="WDD231 Course Home Page Web Site." />
+    <title>WDD231| Course Home Page</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/normalize.css" />
+    <link rel="stylesheet" href="styles/small.css" />
+    <link rel="stylesheet" href="styles/larger.css" />
+
+    <!-- JavaScript -->
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/date.js" defer></script>
+    <script src="scripts/courses.js" defer></script>
+  </head>
+
+  <body>
+    <header>
+      <div class="header-content">
+        <img src="images/logo.svg" alt="Site Logo" class="logo" />
+        <span>Santos Israel</span>
+        <button
+          id="menu-button"
+          aria-label="Open navigation menu"
+          aria-expanded="false"
+        >
+          &#9776;
+        </button>
+      </div>
+    </header>
+    <!--========================================== NAVIGATOR ==============================================-->
+
+    <nav id="navigation" aria-label="Primary Navigation">
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="#"> Chamber Proyect</a></li>
+        <li><a href="#"> Final Project</a></li>
+      </ul>
+    </nav>
+    <main>
+      <h1>Home</h1>
+      <div class="home-grid">
+        <section class="card">
+          <h2>About Me</h2>
+          <p>
+            Hello! My name is Israel Santos, 
+            i'm a student at BYU-Idaho studying Web Development and Design.
+             I have always been interested in technology and how things work behind the scenes,
+              which is what led me to pursue a degree in this field. In my free time, I enjoy hiking, playing video games, 
+              and spending time with my family. 
+              I'm excited to learn more about web development and design through this course and to apply my skills in real-world projects.
+          </p>
+        </section>
+        <section class="card">
+          <h2>Student Photo</h2>
+          <img src="images/student.webp" alt="Student portrait" />
+        </section>
+      </div>
+
+      <section class="courses">
+        <h2>Web Certificate Course</h2>
+        <div class="course-filters">
+          <button id="all">All</button>
+          <button id="cse">CSE</button>
+          <button id="wdd">WDD</button>
+        </div>
+
+        <div id="course-list">
+          <!-- Course card generarted by JavaScript -->
+        </div>
+
+        <!-- SOCIAL LINKS -->
+        <div class="footer-social">
+          <a
+            href="https://github.com/yourusername"
+            target="_blank"
+            aria-label="GitHub"
+          >
+            <img src="images/social/github.svg" alt="GitHub icon" />
+          </a>
+
+          <a
+            href="https://linkedin.com/in/yourprofile"
+            target="_blank"
+            aria-label="LinkedIn"
+          >
+            <img src="images/social/linkedin.svg" alt="LinkedIn icon" />
+          </a>
+          <a
+            href="https://linkedin.com/in/yourprofile"
+            target="_blank"
+            aria-label="Facebook"
+          >
+            <img src="images/social/facebook.svg" alt="Facebook icon" />
+          </a>
+        </div>
+
+        <p class="total-credits">
+          Total Credits: <span id="totalCredits">0</span>
+        </p>
+      </section>
+    </main>
+   <footer>
+
+  <div class="footer-social">
+  <p>
+    &copy; <span id="currentyear"></span> Santos Israel | Ecuador
+  </p>
+
+  <p id="lastModified"></p>
+
+</footer>
+
+  </body>
+</html>

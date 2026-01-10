@@ -1,0 +1,258 @@
+/* =========================
+   GLOBAL STYLES
+========================= */
+
+:root {
+  --primary-color: #1f3a5f;
+  --secondary-color: #4d7ea8;
+  --accent-color: #e36414;
+  --background-color: #f4f4f4;
+  --card-bg: #ffffff;
+  --text-color: #222;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Roboto', system-ui, sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+}
+
+.logo {
+  width: 40px;
+  height: auto;
+}
+
+.site-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+/* Hamburger button */
+#menu-button {
+  margin-left: auto;
+  font-size: 1.6rem;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* =========================
+   NAVIGATION
+========================= */
+
+nav {
+  background-color: var(--secondary-color);
+  display: none;
+}
+
+nav.open {
+  display: block;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+nav a {
+  display: block;
+  padding: 0.75rem 1rem;
+  color: #fff;
+  text-decoration: none;
+}
+
+nav a:hover,
+nav a.active {
+  background-color: var(--accent-color);
+}
+
+/* =========================
+   MAIN CONTENT
+========================= */
+
+main {
+  padding: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h1 {
+  margin-bottom: 1rem;
+}
+
+h2 {
+  margin-top: 0;
+  border-left: 5px solid var(--accent-color);
+  padding-left: 0.5rem;
+}
+
+/* =========================
+   CARDS
+========================= */
+
+.card {
+  background-color: var(--card-bg);
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 6px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+/* =========================
+   COURSES SECTION
+========================= */
+
+.courses {
+  margin-top: 2rem;
+}
+
+.course-filters {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+
+.course-filters button {
+  flex: 1;
+  padding: 0.5rem;
+  border: none;
+  background-color: var(--secondary-color);
+  color: #fff;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.course-filters button:hover {
+  background-color: var(--accent-color);
+}
+
+#course-list {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.course-card {
+  padding: 0.75rem;
+  border-radius: 4px;
+  background-color: #eaeaea;
+}
+
+.course-card.completed {
+  background-color: #c7e8ca;
+  border-left: 6px solid #2e7d32;
+}
+
+.total-credits {
+  margin-top: 1rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+}
+
+.footer-social {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.footer-social img {
+  width: 28px;
+  height: auto;
+}
+#lastModified {
+  color: #fff;
+  font-size: 0.9rem;
+}
+.home-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+.course-filters button {
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.course-filters button:hover {
+  transform: translateY(-1px);
+}
+
+.course-filters button:active {
+  transform: scale(0.97);
+}
+.course-card {
+  font-weight: 500;
+  letter-spacing: 0.2px;
+}
+footer p {
+  margin: 0.25rem 0;
+}
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 2px;
+}
+.header-content {
+  display: flex;
+  align-items: center; /* 🔑 alinea verticalmente */
+  gap: 0.75rem;
+}
+
+.header-content span {
+  font-size: 1.1rem;
+  font-weight: 600;
+  line-height: 1; /* 🔑 evita que el texto “baje” */
+}
+.logo {
+  width: 40px;
+  height: 40px;
+  display: block;
+}
