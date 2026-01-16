@@ -4,28 +4,32 @@ const courses = [
     number: 110,
     title: "Introduction to Programming",
     credits: 2,
-    completed: true
+    completed: true,
+    selected: false
   },
   {
     subject: "WDD",
     number: 130,
     title: "Web Fundamentals",
     credits: 2,
-    completed: true
+    completed: true,
+    selected: false
   },
   {
     subject: "CSE",
     number: 111,
     title: "Programming with Functions",
     credits: 2,
-    completed: false
+    completed: false,
+    selected: false
   },
   {
     subject: "WDD",
     number: 231,
     title: "Frontend Web Development I",
     credits: 3,
-    completed: false
+    completed: false,
+    selected: false
   }
 ];
 
@@ -43,28 +47,45 @@ function displayCourses(courseArray) {
       courseCard.classList.add("completed");
     }
 
+    if (course.selected) {
+      courseCard.classList.add("selected");
+    }
+
     courseCard.textContent = `${course.subject} ${course.number} - ${course.title} (${course.credits} credits)`;
+
+    // 🔑 USER SELECTION
+    courseCard.addEventListener("click", () => {
+      course.selected = !course.selected;
+      updateCredits();
+      displayCourses(courseArray);
+    });
+
     courseList.appendChild(courseCard);
   });
+}
 
-  const totalCredits = courseArray.reduce((sum, course) => sum + course.credits, 0);
+function updateCredits() {
+  const totalCredits = courses.reduce(
+    (sum, course) => course.selected ? sum + course.credits : sum,
+    0
+  );
+
   totalCreditsSpan.textContent = totalCredits;
 }
 
-// Button filters
+// FILTER BUTTONS
 document.getElementById("all").addEventListener("click", () => {
   displayCourses(courses);
 });
 
 document.getElementById("cse").addEventListener("click", () => {
-  const filtered = courses.filter(course => course.subject === "CSE");
-  displayCourses(filtered);
+  displayCourses(courses.filter(course => course.subject === "CSE"));
 });
 
 document.getElementById("wdd").addEventListener("click", () => {
-  const filtered = courses.filter(course => course.subject === "WDD");
-  displayCourses(filtered);
+  displayCourses(courses.filter(course => course.subject === "WDD"));
 });
 
-// Initial load
+// INITIAL LOAD
 displayCourses(courses);
+updateCredits();

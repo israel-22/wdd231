@@ -5,6 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="Santos Israel" />
     <meta name="description" content="WDD231 Course Home Page Web Site." />
+    <meta property="og:title" content="WDD 231 – Frontend Development">
+    <meta property="og:description" content="Proyecto académico de desarrollo web frontend con HTML, CSS y JavaScript.">
+    <meta property="og:image" content="https://israel-22.github.io/wdd231/images/preview.jpg">
+    <meta property="og:url" content="https://github.com/israel-22/wdd231/">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
+    <link rel="icon" href="favicon.ico">
+
+    
     <title>WDD231| Course Home Page</title>
 
     <!-- CSS -->
@@ -20,18 +31,20 @@
 
   <body>
     <header>
-      <div class="header-content">
-        <img src="images/logo.svg" alt="Site Logo" class="logo" />
-        <span>Santos Israel</span>
-        <button
-          id="menu-button"
-          aria-label="Open navigation menu"
-          aria-expanded="false"
-        >
-          &#9776;
-        </button>
-      </div>
-    </header>
+  <div class="header-content">
+    <img src="images/logo.svg" alt="Site Logo" class="logo" width="48" height="48" />
+    <span class="site-name">Santos Israel</span>
+
+    <button
+      id="menu-button"
+      aria-label="Open navigation menu"
+      aria-expanded="false"
+    >
+      &#9776;
+    </button>
+  </div>
+</header>
+
     <!--========================================== NAVIGATOR ==============================================-->
 
     <nav id="navigation" aria-label="Primary Navigation">
@@ -57,7 +70,7 @@
         </section>
         <section class="card">
           <h2>Student Photo</h2>
-          <img src="images/student.webp" alt="Student portrait" />
+          <img src="images/student.webp" alt="Student portrait" width="300" height="300"/>
         </section>
       </div>
 
@@ -104,16 +117,16 @@
         </p>
       </section>
     </main>
-   <footer>
-
+ <footer>
   <div class="footer-social">
-  <p>
-    &copy; <span id="currentyear"></span> Santos Israel | Ecuador
-  </p>
+    <p>
+      &copy; <span id="currentyear"></span> Santos Israel | Ecuador
+    </p>
 
-  <p id="lastModified"></p>
-
+    <p id="lastModified"></p>
+  </div>
 </footer>
+
 
   </body>
 </html>

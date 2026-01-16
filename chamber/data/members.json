@@ -1,0 +1,124 @@
+{
+  "members": [
+    {
+      "id": 1,
+      "nombre": "Carlos",
+      "apellido": "Paredes",
+      "edad": 34,
+      "cargo": "Analista Financiero",
+      "empresa": "Banco Pichincha"
+    },
+    {
+      "id": 2,
+      "nombre": "María",
+      "apellido": "Andrade",
+      "edad": 29,
+      "cargo": "Ejecutiva de Cuentas",
+      "empresa": "Banco Guayaquil"
+    },
+    {
+      "id": 3,
+      "nombre": "Luis",
+      "apellido": "Cevallos",
+      "edad": 41,
+      "cargo": "Supervisor de Operaciones",
+      "empresa": "CNT"
+    },
+    {
+      "id": 4,
+      "nombre": "Andrea",
+      "apellido": "Molina",
+      "edad": 26,
+      "cargo": "Diseñadora Gráfica",
+      "empresa": "Claro Ecuador"
+    },
+    {
+      "id": 5,
+      "nombre": "Jorge",
+      "apellido": "Villacís",
+      "edad": 38,
+      "cargo": "Ingeniero de Sistemas",
+      "empresa": "Movistar Ecuador"
+    },
+    {
+      "id": 6,
+      "nombre": "Daniela",
+      "apellido": "Reinoso",
+      "edad": 31,
+      "cargo": "Especialista en Marketing",
+      "empresa": "Supermaxi"
+    },
+    {
+      "id": 7,
+      "nombre": "Fernando",
+      "apellido": "Yánez",
+      "edad": 45,
+      "cargo": "Jefe de Logística",
+      "empresa": "Corporación Favorita"
+    },
+    {
+      "id": 8,
+      "nombre": "Paola",
+      "apellido": "Sánchez",
+      "edad": 28,
+      "cargo": "Asistente Administrativa",
+      "empresa": "Pronaca"
+    },
+    {
+      "id": 9,
+      "nombre": "Ricardo",
+      "apellido": "López",
+      "edad": 36,
+      "cargo": "Analista de Datos",
+      "empresa": "KIA Ecuador"
+    },
+    {
+      "id": 10,
+      "nombre": "Verónica",
+      "apellido": "Espinosa",
+      "edad": 33,
+      "cargo": "Recursos Humanos",
+      "empresa": "Banco del Pacífico"
+    },
+    {
+      "id": 11,
+      "nombre": "Esteban",
+      "apellido": "Cruz",
+      "edad": 27,
+      "cargo": "Soporte Técnico",
+      "empresa": "CNT"
+    },
+    {
+      "id": 12,
+      "nombre": "Natalia",
+      "apellido": "Peñaherrera",
+      "edad": 35,
+      "cargo": "Coordinadora Comercial",
+      "empresa": "Claro Ecuador"
+    },
+    {
+      "id": 13,
+      "nombre": "Diego",
+      "apellido": "Rosero",
+      "edad": 42,
+      "cargo": "Gerente de Proyecto",
+      "empresa": "Movistar Ecuador"
+    },
+    {
+      "id": 14,
+      "nombre": "Sofía",
+      "apellido": "Benítez",
+      "edad": 24,
+      "cargo": "Pasante de Sistemas",
+      "empresa": "Banco Pichincha"
+    },
+    {
+      "id": 15,
+      "nombre": "Miguel",
+      "apellido": "Hidalgo",
+      "edad": 39,
+      "cargo": "Auditor Interno",
+      "empresa": "Banco del Pacífico"
+    }
+  ]
+}

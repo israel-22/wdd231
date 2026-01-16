@@ -3,13 +3,14 @@
 ========================= */
 
 :root {
-  --primary-color: #1f3a5f;
-  --secondary-color: #4d7ea8;
-  --accent-color: #e36414;
+ --primary-color: #1f3a5f;
+  --secondary-color: #2f5d8a; /* MÁS OSCURO */
+  --accent-color: #c75100;    /* MÁS OSCURO */
   --background-color: #f4f4f4;
   --card-bg: #ffffff;
-  --text-color: #222;
+  --text-color: #1a1a1a;
 }
+
 
 * {
   box-sizing: border-box;
@@ -22,6 +23,7 @@ body {
   color: var(--text-color);
   line-height: 1.6;
 }
+
 
 /* =========================
    HEADER
@@ -175,15 +177,38 @@ h2 {
 }
 
 .course-card.completed {
-  background-color: #c7e8ca;
-  border-left: 6px solid #2e7d32;
+  background-color: #b6dfc1; /* un poco más oscuro */
+  border-left: 6px solid #1b5e20;
+  color: #1a1a1a;
 }
+
 
 .total-credits {
   margin-top: 1rem;
   font-weight: bold;
   text-align: center;
 }
+
+.course-filters button {
+  flex: 1;
+  padding: 0.5rem;
+  border: none;
+  background-color: var(--secondary-color);
+  color: #fff;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.course-filters button:hover {
+  background-color: var(--accent-color);
+  transform: translateY(-1px);
+}
+
+.course-filters button:active {
+  transform: scale(0.97);
+}
+
 
 
 /* =========================
@@ -255,4 +280,9 @@ a:focus-visible {
   width: 40px;
   height: 40px;
   display: block;
+}
+.course-card.selected {
+  outline: 3px solid var(--accent-color);
+  background-color: #fff3e6;
+  cursor: pointer;
 }
