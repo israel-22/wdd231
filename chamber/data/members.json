@@ -2,123 +2,84 @@
   "members": [
     {
       "id": 1,
-      "nombre": "Carlos",
-      "apellido": "Paredes",
-      "edad": 34,
-      "cargo": "Analista Financiero",
-      "empresa": "Banco Pichincha"
+      "company": "Pichincha Bank",
+      "address": "Av. Amazonas y Pereira, Quito",
+      "phone": "02-2999-999",
+      "website": "https://www.pichincha.com",
+      "image": "images/pichincha.jpg",
+      "membershipLevel": 3
     },
     {
       "id": 2,
-      "nombre": "María",
-      "apellido": "Andrade",
-      "edad": 29,
-      "cargo": "Ejecutiva de Cuentas",
-      "empresa": "Banco Guayaquil"
+      "company": "Guayaquil Bank",
+      "address": "Av. 6 de Diciembre y Gaspar de Villarroel, Quito",
+      "phone": "02-3730-100",
+      "website": "https://www.bancoguayaquil.com",
+      "image": "images/guayaquil.png",
+      "membershipLevel": 2
     },
     {
       "id": 3,
-      "nombre": "Luis",
-      "apellido": "Cevallos",
-      "edad": 41,
-      "cargo": "Supervisor de Operaciones",
-      "empresa": "CNT"
+      "company": "CNT",
+      "address": "Av. Naciones Unidas, Quito",
+      "phone": "02-2222-222",
+      "website": "https://www.cnt.gob.ec",
+      "image": "images/cnt.png",
+      "membershipLevel": 3
     },
     {
       "id": 4,
-      "nombre": "Andrea",
-      "apellido": "Molina",
-      "edad": 26,
-      "cargo": "Diseñadora Gráfica",
-      "empresa": "Claro Ecuador"
+      "company": "Claro Ecuador",
+      "address": "Av. República y Diego de Almagro, Quito",
+      "phone": "02-500-5000",
+      "website": "https://www.claro.com.ec",
+      "image": "images/claro.jpg",
+      "membershipLevel": 3
     },
     {
       "id": 5,
-      "nombre": "Jorge",
-      "apellido": "Villacís",
-      "edad": 38,
-      "cargo": "Ingeniero de Sistemas",
-      "empresa": "Movistar Ecuador"
+      "company": "Movistar Ecuador",
+      "address": "Av. Portugal y Catalina Aldaz, Quito",
+      "phone": "02-400-4000",
+      "website": "https://www.movistar.com.ec",
+      "image": "images/movistar.png",
+      "membershipLevel": 2
     },
     {
       "id": 6,
-      "nombre": "Daniela",
-      "apellido": "Reinoso",
-      "edad": 31,
-      "cargo": "Especialista en Marketing",
-      "empresa": "Supermaxi"
+      "company": "Supermaxi",
+      "address": "Av. Eloy Alfaro, Quito",
+      "phone": "02-398-5000",
+      "website": "https://www.supermaxi.com",
+      "image": "images/supermaxi.png",
+      "membershipLevel": 1
     },
     {
       "id": 7,
-      "nombre": "Fernando",
-      "apellido": "Yánez",
-      "edad": 45,
-      "cargo": "Jefe de Logística",
-      "empresa": "Corporación Favorita"
+      "company": "Favorita Corporation",
+      "address": "Av. General Rumiñahui, Quito",
+      "phone": "02-299-0000",
+      "website": "https://www.corporacionfavorita.com",
+      "image": "images/favorita.jpeg",
+      "membershipLevel": 3
     },
     {
       "id": 8,
-      "nombre": "Paola",
-      "apellido": "Sánchez",
-      "edad": 28,
-      "cargo": "Asistente Administrativa",
-      "empresa": "Pronaca"
+      "company": "Pronaca",
+      "address": "Av. Simón Bolívar, Quito",
+      "phone": "02-300-7000",
+      "website": "https://www.pronaca.com",
+      "image": "images/pronaca.jpeg",
+      "membershipLevel": 2
     },
     {
       "id": 9,
-      "nombre": "Ricardo",
-      "apellido": "López",
-      "edad": 36,
-      "cargo": "Analista de Datos",
-      "empresa": "KIA Ecuador"
-    },
-    {
-      "id": 10,
-      "nombre": "Verónica",
-      "apellido": "Espinosa",
-      "edad": 33,
-      "cargo": "Recursos Humanos",
-      "empresa": "Banco del Pacífico"
-    },
-    {
-      "id": 11,
-      "nombre": "Esteban",
-      "apellido": "Cruz",
-      "edad": 27,
-      "cargo": "Soporte Técnico",
-      "empresa": "CNT"
-    },
-    {
-      "id": 12,
-      "nombre": "Natalia",
-      "apellido": "Peñaherrera",
-      "edad": 35,
-      "cargo": "Coordinadora Comercial",
-      "empresa": "Claro Ecuador"
-    },
-    {
-      "id": 13,
-      "nombre": "Diego",
-      "apellido": "Rosero",
-      "edad": 42,
-      "cargo": "Gerente de Proyecto",
-      "empresa": "Movistar Ecuador"
-    },
-    {
-      "id": 14,
-      "nombre": "Sofía",
-      "apellido": "Benítez",
-      "edad": 24,
-      "cargo": "Pasante de Sistemas",
-      "empresa": "Banco Pichincha"
-    },
-    {
-      "id": 15,
-      "nombre": "Miguel",
-      "apellido": "Hidalgo",
-      "edad": 39,
-      "cargo": "Auditor Interno",
-      "empresa": "Banco del Pacífico"
+      "company": "KIA Ecuador",
+      "address": "Av. Occidental, Quito",
+      "phone": "02-600-6000",
+      "website": "https://www.kia.com/ec",
+      "image": "images/kia.png",
+      "membershipLevel": 1
     }
   ]
 }

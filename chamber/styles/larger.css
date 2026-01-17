@@ -1,0 +1,54 @@
+/* ===== LARGER SCREENS (DESKTOP) ===== */
+@media (min-width: 768px) {
+
+  /* ----- HEADER ----- */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 2rem;
+  }
+
+  header h1 {
+    font-size: 1.8rem;
+    text-align: left;
+  }
+
+  /* ----- NAVIGATION ----- */
+  nav ul {
+    justify-content: flex-end;
+    gap: 1.5rem;
+  }
+
+  nav a {
+    font-size: 1rem;
+  }
+
+  /* ----- MAIN CONTENT ----- */
+  main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+
+  .menu {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 1.5rem;
+  }
+
+  /* ----- DIRECTORY GRID ----- */
+  #members.grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* ----- LIST VIEW ----- */
+  #members.list .member-card {
+    grid-template-columns: 120px 1fr;
+  }
+
+  /* ----- FOOTER ----- */
+  footer {
+    font-size: 0.95rem;
+  }
+}

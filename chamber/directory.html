@@ -1,54 +1,66 @@
 <!DOCTYPE html>
 <html lang="en-US">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Chamber of Commerce | Directory</title>
 
-    <meta name="description" content="Directorio de negocios miembros de la Cámara de Comercio">
-    <meta name="author" content="Israel Santos">
+    <meta
+      name="description"
+      content="Directorio de negocios miembros de la Cámara de Comercio"
+    />
+    <meta name="author" content="Israel Santos" />
 
-    <link rel="icon" href="favicon.ico">
-    <link rel="stylesheet" href="styles/normalize.css">
-    <link rel="stylesheet" href="styles/chamber.css">
+    <link rel="icon" href="favicon.ico" />
+    <link rel="stylesheet" href="styles/normalize.css" />
+    <link rel="stylesheet" href="styles/small.css" />
+    <link
+      rel="stylesheet"
+      href="styles/larger.css"
+      media="(min-width: 768px)"
+    />
 
-    <meta property="og:title" content="Chamber of Commerce Directory">
-    <meta property="og:description" content="Conoce los negocios miembros de la Cámara de Comercio">
-    <meta property="og:image" content="images/og-image.jpg">
-    <meta property="og:url" content="https://israel-22.github/wdd231/chamber/directory.html">
-</head>
-<body>
+    <meta property="og:title" content="Chamber of Commerce Directory" />
+    <meta
+      property="og:description"
+      content="Conoce los negocios miembros de la Cámara de Comercio"
+    />
+    <meta property="og:image" content="images/og-image.jpg" />
+    <meta
+      property="og:url"
+      content="https://israel-22.github/wdd231/chamber/directory.html"
+    />
+  </head>
+  <body>
     <header>
-        <h1>Chamber of Commerce Directory</h1>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Directory</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
+      <h1>Chamber of Commerce Directory</h1>
+      <nav>
+        <ul>
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="directory.html" class="active">Directory</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
     </header>
 
-       <main>
-            <h2>Business Directory</h2>
-            <div class="menu"> 
-            <button id="grid">Grid</button>
-            <button id="list">List</button>
-            </div>
-            
+    <main>
+      <h2>Business Directory</h2>
+      <div class="menu">
+        <button id="grid" aria-label="Grid view">Grid</button>
+        <button id="list" aria-label="List view">List</button>
+      </div>
 
-            <section id="members" class="grid">
-                <!-- Business entries will be dynamically inserted here Cards Javascript -->
-            </section>
-        </main>
+      <section id="members" class="grid">
+        <!-- Business entries will be dynamically inserted here Cards Javascript -->
+      </section>
+    </main>
     <footer>
-        <p>&copy; 2024 Chamber of Commerce. All rights reserved.</p>
-        <p> © <span id="year"></span> Israel Santos | WDD 231 </p>
-        <p> Last Modification: <span id="lastModified"></span> </p>
+      <p>&copy; 2024 Chamber of Commerce. All rights reserved.</p>
+      <p>© <span id="year"></span> Israel Santos | WDD 231</p>
+      <p>Last Modification: <span id="lastModified"></span></p>
     </footer>
-  
-    <script src="scripts/members.js"></script>
-    
-</body>
+
+    <script src="scripts/members.js" defer></script>
+  </body>
 </html>
