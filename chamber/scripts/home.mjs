@@ -1,7 +1,6 @@
+import { loadSpotlights } from "./spotlights.mjs";
+import { getWeather, getForecast } from "./weather.mjs";
 
-import { getWeather } from "./weather.mjs";
-import { displaySpotlights } from "./spotlights.mjs";
-
-
-displaySpotlights();
+loadSpotlights();
 getWeather();
+getForecast();

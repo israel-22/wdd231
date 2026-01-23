@@ -3,82 +3,96 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>Ecuador | Chamber of Commerce</title>
 
-   <meta name="description" content="Official home page of the Ecuador Chamber of Commerce supporting local businesses and community growth.">
-
+    <meta
+      name="description"
+      content="Official home page of the Ecuador Chamber of Commerce supporting local businesses and community growth."
+    />
     <meta name="author" content="Israel Santos" />
 
     <link rel="icon" href="favicon.ico" />
     <link rel="stylesheet" href="styles/normalize.css" />
     <link rel="stylesheet" href="styles/small.css" />
-    <link rel="stylesheet" href="styles/larger.css" media="(min-width: 768px)" />
-    <meta property="og:title" content="Chamber of Commerce Directory" />
+    <link
+      rel="stylesheet"
+      href="styles/larger.css"
+      media="(min-width: 768px)"
+    />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Ecuador Chamber of Commerce" />
     <meta
       property="og:description"
-      content="Conoce los negocios miembros de la Cámara de Comercio"
+      content="Supporting local businesses and community growth in Ecuador."
     />
     <meta property="og:image" content="images/og-image.jpg" />
     <meta
       property="og:url"
-      content="https://israel-22.github/wdd231/chamber/directory.html"
+      content="https://israel-22.github.io/wdd231/chamber/index.html"
     />
   </head>
+
   <body>
     <header>
-      <h1>Chamber of Commerce Directory</h1>
-       <nav class="navbar">
-    <button id="menuButton" aria-label="Toggle Menu">
-      ☰
-    </button>
-    <ul id="navMenu">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="discover.html">Discover</a></li>
-      <li><a href="directory.html" class="active">Directory</a></li>
-      <li><a href="join.html">Join</a></li>
-    </ul>
-  </nav>
+      <h1>Ecuador Chamber of Commerce</h1>
+
+      <nav class="navbar">
+        <button id="menuButton" aria-label="Toggle Menu">☰</button>
+        <ul id="navMenu">
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="discover.html">Discover</a></li>
+          <li><a href="directory.html">Directory</a></li>
+          <li><a href="join.html">Join</a></li>
+        </ul>
+      </nav>
     </header>
 
     <main id="home">
+      <!-- HERO -->
+      <section class="hero">
+        <h2>Welcome to the Ecuador Chamber of Commerce</h2>
+        <p>Supporting local business and community growth.</p>
+        <a href="#" class="cta-button">Join the Chamber</a>
+      </section>
 
+      <!-- EVENTS -->
+      <section class="events">
+        <h2>Current Events</h2>
+        <p>
+          Upcoming networking events, workshops, and community meetings.
+        </p>
+      </section>
 
-  <!-- HERO -->
-  <section class="hero">
-    <h2>Welcome to the Ecuador Chamber of Commerce</h2>
-    <p>Supporting local business and community growth.</p>
-    <a href="#" class="cta-button">Join the Chamber</a>
-  </section>
+      <!-- WEATHER -->
+      <section class="weather">
+        <h2>Weather</h2>
+        <p>
+          Current temperature: <span id="current-temp"></span>
+        </p>
+        <figure>
+          <img
+            id="weather-icon"
+            src=""
+            alt="Weather icon"
+          />
+          <figcaption id="weather-desc"></figcaption>
+        </figure>
+      </section>
 
-  <!-- EVENTS -->
-  <section class="events">
-    <h2>Current Events</h2>
-    <p>Upcoming networking events, workshops, and community meetings.</p>
-  </section>
+      <!-- FORECAST -->
+      <section class="forecast">
+        <h2>3-Day Forecast</h2>
+        <div id="forecast"></div>
+      </section>
 
-  <!-- WEATHER -->
-  <section class="weather">
-  <h2>Weather</h2>
-  <p>Current temperature: <span id="current-temp"></span></p>
-  <figure>
-    <img id="weather-icon" src="" alt="">
-    <figcaption id="weather-desc"></figcaption>
-  </figure>
-</section>
-
-<section class="forecast">
-  <h2>3-Day Forecast</h2>
-  <div id="forecast"></div>
-</section>
-
-
-
-  <!-- SPOTLIGHTS -->
-  <section class="spotlights">
-    <h2>Business Spotlights</h2>
-    <div id="spotlight-container"></div>
-  </section>
-</main>
+      <!-- SPOTLIGHTS -->
+      <section class="spotlights">
+        <h2>Business Spotlights</h2>
+        <div id="spotlight-container"></div>
+      </section>
+    </main>
 
     <footer>
       <p>&copy; 2024 Chamber of Commerce. All rights reserved.</p>
@@ -86,9 +100,7 @@
       <p>Last Modification: <span id="lastModified"></span></p>
     </footer>
 
-   
     <script src="scripts/navigation.js" defer></script>
     <script type="module" src="scripts/home.mjs"></script>
-
   </body>
 </html>

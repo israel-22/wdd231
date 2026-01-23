@@ -1,4 +1,4 @@
-/* ===== LARGER SCREENS (DESKTOP) ===== */
+/* ===== LARGER.CSS SCREENS (DESKTOP) ===== */
 @media (min-width: 768px) {
 
   /* ----- HEADER ----- */
@@ -24,11 +24,28 @@
     font-size: 1rem;
   }
 
-  /* ----- MAIN CONTENT ----- */
-  main {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 2rem;
+  #home {
+    grid-template-columns: 2fr 1fr;
+  }
+
+  .hero {
+    grid-column: 1 / -1;
+  }
+
+  .spotlights {
+    grid-column: 1 / -1;
+  }
+
+
+  .spotlights img {
+    width: 140px;
+    height: 140px;
+  }
+
+
+
+  #spotlight-container {
+    grid-template-columns: repeat(3, 1fr);
   }
 
   .menu {
@@ -46,28 +63,25 @@
   #members.list .member-card {
     grid-template-columns: 120px 1fr;
   }
+  /* ----- HERO ----- */
+
+    .hero {
+    padding: 4rem 2rem;
+  }
+
+  .hero h2 {
+    font-size: 2.4rem;
+  }
+
+  .hero p {
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto 1.5rem;
+  }
 
   /* ----- FOOTER ----- */
   footer {
     font-size: 0.95rem;
   }
 }
-/* ---------- HOME LARGE VIEW ---------- */
-@media (min-width: 768px) {
 
-  #home {
-    grid-template-columns: 2fr 1fr;
-  }
-
-  .hero {
-    grid-column: 1 / -1;
-  }
-
-  .spotlights {
-    grid-column: 1 / -1;
-  }
-
-  #spotlight-container {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
