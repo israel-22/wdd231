@@ -144,11 +144,11 @@ nav a:focus {
 footer {
   background-color: var(--primary-color);
   color: #ffffff;
-   margin: 0 auto;
   text-align: center;
   padding: 1.5rem 1rem;
   margin-top: 2rem;
 }
+
 
 footer p {
   margin: 0.3rem 0;
@@ -202,20 +202,27 @@ nav a.active {
 
 /* HERO */
 .hero {
-  background: linear-gradient(
-    rgba(11, 60, 93, 0.9),
-    rgba(11, 60, 93, 0.9)
-  );
+  background-image:
+    linear-gradient(
+      rgba(11, 60, 93, 0.75),
+      rgba(11, 60, 93, 0.75)
+    ),
+    url("../images/hero.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
   color: #ffffff;
-  padding: 3rem 1.5rem;
+  padding: 4rem 1.5rem;
   text-align: center;
   border-radius: 8px;
 }
 
 .hero h2 {
-  font-size: 1.6rem;
+  font-size: 2rem;
   line-height: 1.3;
-  margin-bottom: 0.75rem;
+  margin-bottom: 1rem;
 }
 
 .hero p {
@@ -254,12 +261,10 @@ nav a.active {
 
 .weather {
   color: black;
-  background: #f2f2f2;
-  padding: 1rem;
+ 
 }
 
 .weather figure {
-  margin-top: 1rem;
   text-align: center;
   margin-top: 0.5rem;
 }
@@ -271,6 +276,7 @@ nav a.active {
 .weather img {
   width: 60px;
   height: auto;
+  object-fit: contain;
 }
 
 /* SPOTLIGHTS */
@@ -284,13 +290,19 @@ nav a.active {
   padding: 1rem;
   border-radius: 6px;
   text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.spotlights article:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
 }
 
 .spotlights img {
-  width: 120px;
-  height: 120px;
+  width: 100%;
+  max-width: 120px;
+  height: 80px;
   object-fit: contain;
-  margin: 0.5rem auto;
+  margin: 0 auto 0.5rem;
   display: block;
 }
 
@@ -307,6 +319,7 @@ nav a.active {
   grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
   margin-top: 1rem;
+
 }
 
 .forecast-day {
@@ -330,4 +343,9 @@ nav a.active {
 .forecast-day p {
   margin-top: 0.3rem;
   font-weight: bold;
+}
+@media (max-width: 500px) {
+  #forecast {
+    grid-template-columns: 1fr;
+  }
 }
