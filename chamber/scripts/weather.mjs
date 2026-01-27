@@ -3,6 +3,7 @@ const weatherIcon = document.getElementById("weather-icon");
 const weatherDesc = document.getElementById("weather-desc");
 const forecastContainer = document.querySelector("#forecast");
 
+
 const forecastUrl ="https://api.openweathermap.org/data/2.5/forecast?lat=49.75&lon=6.64&units=imperial&appid=200aefc666b78e670c5e0c14f5477e8c";
 
 
@@ -37,18 +38,19 @@ async function fetchForecast() {
 }
 
 function displayResults(data) {
+  if (!currentTemp || !weatherIcon || !weatherDesc) return;
+
   currentTemp.innerHTML = `${data.main.temp.toFixed(1)}&deg;F`;
 
   const icon = data.weather[0].icon;
   const desc = data.weather[0].description;
 
-  weatherIcon.setAttribute(
-    "src",
-    `https://openweathermap.org/img/w/${icon}.png`
-  );
-  weatherIcon.setAttribute("alt", desc);
+  weatherIcon.src = `https://openweathermap.org/img/wn/${icon}@2x.png`;
+  weatherIcon.alt = desc;
+
   weatherDesc.textContent = desc;
 }
+
 
 function displayForecast(list) {
   if (!forecastContainer) return;
@@ -69,10 +71,10 @@ function displayForecast(list) {
     card.classList.add("forecast-day");
 
     card.innerHTML = `
-      <h3>${date.toLocaleDateString("en-US", { weekday: "short" })}</h3>
-      <img src="https://openweathermap.org/img/w/${icon}.png" alt="${desc}">
-      <p>${temp}°F</p>
-    `;
+  <h3>${date.toLocaleDateString("en-US", { weekday: "short" })}</h3>
+  <img src="https://openweathermap.org/img/wn/${icon}@2x.png" alt="${desc}">
+  <p>${temp}°F</p>
+`;
 
     forecastContainer.appendChild(card);
   });

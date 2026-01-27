@@ -274,9 +274,11 @@ nav a.active {
 }
 
 .weather img {
+  .forecast-day img,
+.spotlights img {
   width: 60px;
   height: auto;
-  object-fit: contain;
+  object-fit: contain;}
 }
 
 /* SPOTLIGHTS */
@@ -348,4 +350,11 @@ nav a.active {
   #forecast {
     grid-template-columns: 1fr;
   }
+}
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+h1, h2, h3, nav a {
+  font-family: "Montserrat", sans-serif;
 }
