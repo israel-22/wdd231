@@ -39,18 +39,23 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap"
       rel="stylesheet"
     />
-
-    
   </head>
 
   <body>
     <header>
       <h1>Ecuador Chamber of Commerce</h1>
 
+      <button
+        id="menuButton"
+        aria-label="Toggle navigation menu"
+        aria-expanded="false"
+      >
+        ☰
+      </button>
+
       <nav class="navbar">
-        <button id="menuButton" aria-label="Toggle Menu">☰</button>
         <ul id="navMenu">
-          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="index.html" aria-current="page">Home</a></li>
           <li><a href="discover.html">Discover</a></li>
           <li><a href="directory.html">Directory</a></li>
           <li><a href="join.html">Join</a></li>

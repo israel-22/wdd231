@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="UTF-8" />
@@ -34,17 +34,21 @@
   <body>
     <header>
       <h1>Chamber of Commerce Directory</h1>
-       <nav class="navbar">
-    <button id="menuButton" aria-label="Toggle Menu">
-      ☰
-    </button>
-    <ul id="navMenu">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="discover.html">Discover</a></li>
-      <li><a href="directory.html" class="active">Directory</a></li>
-      <li><a href="join.html">Join</a></li>
-    </ul>
-  </nav>
+      <button
+        id="menuButton"
+        aria-label="Toggle navigation menu"
+        aria-expanded="false"
+      >
+        ☰
+      </button>
+      <nav class="navbar">
+        <ul id="navMenu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="discover.html">Discover</a></li>
+          <li><a href="directory.html" aria-current="page">Directory</a></li>
+          <li><a href="join.html">Join</a></li>
+        </ul>
+      </nav>
     </header>
 
     <main>

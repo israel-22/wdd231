@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Join | Chamber</title>
+
+  <meta name="description" content="Directorio de negocios miembros de la Cámara de Comercio" />
+  <meta name="author" content="Israel Santos" />
+
+  <link rel="icon" href="favicon.ico" />
+  <link rel="stylesheet" href="styles/normalize.css" />
+  <link rel="stylesheet" href="styles/small.css" />
+  <link rel="stylesheet" href="styles/join.css" />
+  <link rel="stylesheet" href="styles/larger.css" media="(min-width: 768px)" />
+
+  <meta property="og:title" content="Chamber of Commerce | Join" />
+  <meta property="og:description" content="Know more about joining the Chamber of Commerce" />
+  <meta property="og:image" content="images/og-image.jpg" />
+  <meta property="og:url" content="https://israel-22.github/wdd231/chamber/join.html" />
+</head>
+<body>
+  <!-- Header / Navigation -->
+  <header>
+    <h1>Chamber of Commerce Directory</h1>
+    <button id="menuButton" aria-label="Toggle navigation menu" aria-expanded="false">☰</button>
+    <nav class="navbar">
+      <ul id="navMenu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="discover.html">Discover</a></li>
+        <li><a href="directory.html">Directory</a></li>
+        <li><a href="join.html" aria-current="page">Join</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main Form -->
+  <main class="join-page">
+    <h2>Join the Chamber</h2>
+
+    <form method="get" action="thankyou.html">
+      <label>
+        First Name
+        <input type="text" name="firstName" title="First Name" autocomplete="given-name" required />
+      </label>
+
+      <label>
+        Last Name
+        <input type="text" name="lastName" title="Last Name" autocomplete="family-name" required />
+      </label>
+
+      <label>
+        Organizational Title
+        <input type="text" name="orgTitle" title="Organizational Title" autocomplete="organization-title" pattern="[A-Za-z\s\-]{7,}" />
+      </label>
+
+      <label>
+        Email
+        <input type="email" name="email" title="Email Address" autocomplete="email" placeholder="example@email.com" required />
+      </label>
+
+      <label>
+        Mobile Phone
+        <input type="tel" name="phone" title="Mobile Phone" autocomplete="tel" required />
+      </label>
+
+      <label>
+        Organization Name
+        <input type="text" name="organization" title="Organization Name" autocomplete="organization" required />
+      </label>
+
+      <label>
+        Membership Level
+        <select name="membership" required>
+          <option value="">Select a level</option>
+          <option value="np">NP Membership</option>
+          <option value="bronze">Bronze Membership</option>
+          <option value="silver">Silver Membership</option>
+          <option value="gold">Gold Membership</option>
+        </select>
+      </label>
+
+      <label>
+        Business Description
+        <textarea name="description" title="Business Description" rows="4"></textarea>
+      </label>
+
+      <input type="hidden" name="timestamp" id="timestamp" />
+
+      <input type="submit" value="Apply for Membership" />
+    </form>
+
+    <!-- Membership Cards -->
+    <section class="membership-cards">
+      <h3>Membership Levels</h3>
+      <div class="cards-container">
+        <div class="card" data-modal="npModal">
+          <h4>NP Membership</h4>
+          <a href="#" class="modal-link">View Benefits</a>
+        </div>
+        <div class="card" data-modal="bronzeModal">
+          <h4>Bronze Membership</h4>
+          <a href="#" class="modal-link">View Benefits</a>
+        </div>
+        <div class="card" data-modal="silverModal">
+          <h4>Silver Membership</h4>
+          <a href="#" class="modal-link">View Benefits</a>
+        </div>
+        <div class="card" data-modal="goldModal">
+          <h4>Gold Membership</h4>
+          <a href="#" class="modal-link">View Benefits</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Modals -->
+    <div id="npModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h4>NP Membership Benefits</h4>
+        <ul>
+          <li>No fee</li>
+          <li>Access to basic resources</li>
+          <li>Newsletter subscription</li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="bronzeModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h4>Bronze Membership Benefits</h4>
+        <ul>
+          <li>All NP benefits</li>
+          <li>Event invitations</li>
+          <li>Website listing</li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="silverModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h4>Silver Membership Benefits</h4>
+        <ul>
+          <li>All Bronze benefits</li>
+          <li>Advertising spotlight</li>
+          <li>Discounts on workshops</li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="goldModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h4>Gold Membership Benefits</h4>
+        <ul>
+          <li>All Silver benefits</li>
+          <li>Premium event access</li>
+          <li>Priority listings & promotions</li>
+        </ul>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 Chamber of Commerce. All rights reserved.</p>
+    <p>© <span id="year"></span> Israel Santos | WDD 231</p>
+    <p>Last Modification: <span id="lastModified"></span></p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="scripts/navigation.js" defer></script>
+  <script type="module">
+    import { initFormPage, initMembershipModals } from './scripts/form.mjs';
+    initFormPage();
+    initMembershipModals();
+  </script>
+</body>
+</html>
