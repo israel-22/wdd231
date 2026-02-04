@@ -1,0 +1,150 @@
+/* ================================
+   VARIABLES (Visual Identity)
+================================ */
+:root {
+  --bg-main: #0b1d3a;      /* Space blue */
+  --bg-section: #111827;  /* Dark panel */
+  --text-main: #f5f5f5;
+  --text-muted: #c7c7c7;
+  --accent: #f9c74f;      /* Scientific accent */
+  --border-soft: rgba(255, 255, 255, 0.1);
+}
+
+/* ================================
+   RESET & BASE STYLES
+================================ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", Arial, sans-serif;
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  line-height: 1.6;
+}
+
+/* ================================
+   HEADER
+================================ */
+header {
+  padding: 2rem 1.5rem;
+  text-align: center;
+  border-bottom: 1px solid var(--border-soft);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+  letter-spacing: 1px;
+}
+
+header p {
+  margin-top: 0.5rem;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+/* ================================
+   MAIN LAYOUT
+================================ */
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+/* ================================
+   SECTIONS
+================================ */
+section {
+  background-color: var(--bg-section);
+  padding: 1.75rem;
+  margin-bottom: 2rem;
+  border-radius: 8px;
+  border: 1px solid var(--border-soft);
+}
+
+section h2 {
+  margin-top: 0;
+  font-size: 1.5rem;
+  border-left: 4px solid var(--accent);
+  padding-left: 0.75rem;
+}
+
+section h3 {
+  margin-top: 1.5rem;
+  font-size: 1.2rem;
+  color: var(--accent);
+}
+
+/* ================================
+   TEXT & LISTS
+================================ */
+p {
+  color: var(--text-muted);
+}
+
+strong {
+  color: var(--text-main);
+}
+
+ul {
+  padding-left: 1.2rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+/* ================================
+   PREFORMATTED CONTENT (WIREFRAMES)
+================================ */
+pre {
+  background-color: #020617;
+  color: #e5e7eb;
+  padding: 1rem;
+  border-radius: 6px;
+  overflow-x: auto;
+  font-size: 0.85rem;
+  border: 1px solid var(--border-soft);
+}
+
+/* ================================
+   LINKS
+================================ */
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ================================
+   FOOTER
+================================ */
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  border-top: 1px solid var(--border-soft);
+}
+
+/* ================================
+   RESPONSIVE DESIGN
+================================ */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 1.6rem;
+  }
+
+  section {
+    padding: 1.25rem;
+  }
+}
