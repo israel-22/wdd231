@@ -85,3 +85,19 @@
   }
 }
 
+@media (min-width: 768px) {
+  .join-page {
+    max-width: 1100px;
+  }
+}
+@media (min-width: 768px) {
+  .join-layout {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2.5rem;
+    align-items: start;
+  }
+  .membership-cards {
+    margin-top: 3rem; 
+  }
+}

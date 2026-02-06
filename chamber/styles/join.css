@@ -2,7 +2,7 @@
 
 
 .join-page {
-  max-width: 600px;
+  max-width: 100%;
   margin: 2rem auto;
   padding: 1.5rem;
   background-color: #f9f9f9;
@@ -149,6 +149,7 @@
   main.join-page {
     display: flex;
     gap: 2rem;
+    
   }
 
   form.join-page {
@@ -158,4 +159,13 @@
   .membership-cards {
     flex: 1;
   }
+}
+.join-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.join-form h2 {
+  margin-bottom: 1rem;
+  text-align: left;
 }
