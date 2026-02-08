@@ -1,6 +1,6 @@
 export const discoverItems = [
   {
-    title: "Mitad del Mundo",
+    title: "World's Middle Monument",
     image: "images/discover/mitaddelmundo.webp",
     address: "Av. Manuel Córdova Galarza, Quito",
     description:
@@ -14,21 +14,21 @@ export const discoverItems = [
       "A UNESCO World Heritage Site known for its well-preserved colonial architecture and rich history."
   },
   {
-    title: "TelefériQo",
+    title: "Teleferico Quito",
     image: "images/discover/teleferico.webp",
     address: "Volcán Pichincha, Quito",
     description:
       "One of the highest aerial lifts in the world, providing panoramic views of the city and surrounding mountains."
   },
   {
-    title: "Guápulo Neighborhood",
+    title: "Guapulo Neighborhood",
     image: "images/discover/guapulo.webp",
     address: "Guápulo, Quito",
     description:
       "A charming bohemian neighborhood known for its art scene, historic church, and scenic viewpoints."
   },
   {
-    title: "Itchimbía Park",
+    title: "Itchimbia Park",
     image: "images/discover/itchimbia.webp",
     address: "Calle Iquique, Quito",
     description:
@@ -42,19 +42,19 @@ export const discoverItems = [
       "A large urban park popular for recreation, business events, and outdoor activities."
   },
   {
-    title: "Basilica del Voto Nacional",
+    title: "National Vote Basilica",
     image: "images/discover/basilica.webp",
     address: "Calle Venezuela, Quito",
     description:
       "An iconic neo-Gothic basilica famous for its towers and Ecuadorian animal-themed gargoyles."
   },
   {
-    title: "Capilla del Hombre",
+    title: "Santo Domingo Church",
     image: "images/discover/capilla.webp",
-    address: "Bellavista, Quito",
+    address: "Calle 5 de Mayo, Quito",
     description:
-      "A cultural museum dedicated to the work of artist Oswaldo Guayasamín and Latin American identity."
-  }
+      "A Gothic church dedicated to Saint Domingo, a patron of Ecuadorian culture and religion."
+ }
 ];
 
 export default discoverItems;
