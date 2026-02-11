@@ -1,0 +1,18 @@
+[
+  {
+    "id": "earth",
+    "name": "Earth",
+    "gravity": 9.8,
+    "meanRadius": 6371,
+    "moons": 1,
+    "description": "The only known planet to support life."
+  },
+  {
+    "id": "mars",
+    "name": "Mars",
+    "gravity": 3.71,
+    "meanRadius": 3389,
+    "moons": 2,
+    "description": "Known as the Red Planet."
+  }
+]

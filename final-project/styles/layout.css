@@ -1,0 +1,108 @@
+/* ================================
+   HEADER & NAVIGATION
+================================ */
+.site-header {
+  border-bottom: 1px solid var(--border-soft);
+}
+
+.header-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: var(--text-main);
+  cursor: pointer;
+}
+
+/* ================================
+   MAIN CONTENT
+================================ */
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+.hero {
+  margin-bottom: 3rem;
+}
+
+.hero h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero p {
+  color: var(--text-muted);
+  max-width: 600px;
+}
+
+/* ================================
+   PLANET GRID (placeholder)
+================================ */
+.planet-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+/* ================================
+   FOOTER
+================================ */
+.site-footer {
+  border-top: 1px solid var(--border-soft);
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+/* ================================
+   RESPONSIVE
+================================ */
+@media (max-width: 768px) {
+  .main-nav {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
+
+/* ================================
+   MOBILE NAV OPEN STATE
+================================ */
+.main-nav.open {
+  display: block;
+  position: absolute;
+  top: 70px;
+  right: 1.5rem;
+  background-color: var(--bg-section);
+  border: 1px solid var(--border-soft);
+  border-radius: 6px;
+  padding: 1rem;
+}
+
+.main-nav.open ul {
+  flex-direction: column;
+  gap: 1rem;
+}

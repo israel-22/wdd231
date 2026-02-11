@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <title>Cosmos Explorer | Solar System</title>
+    <meta charset="UTF-8">
+        <meta name="description" content="Explore the solar system and discover curious facts about planets using real scientific data.">
+        <meta name="author" content="Israel Santos">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       
+        <!--Fonts-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+       <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+       <!-- Styles -->
+      <link rel="stylesheet" href="styles/base.css">
+      <link rel="stylesheet" href="styles/layout.css">   
+      <link rel="stylesheet" href="styles/components.css">   
+</head>
+<body>
+    <header class="site-header">
+    <div class="header-content">
+      <h1>Cosmos Explorer</h1>
+      <button class="menu-toggle" aria-label="Open navigation menu">
+        ☰
+      </button>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="#">Planets</a></li>
+          <li><a href="#">Gallery</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+    <main>
+        <section id ="planets" class="planet-section">
+            <h2>Explore the Solar System</h2>
+            <p>
+                Discover planets, extreme conditions, and real images from space
+                using scientific data and NASA resources.
+                 Uncover the mysteries of our cosmic neighborhood and learn about the wonders of the solar system.
+            </p>
+            <!-- Dynamic planets cards will be injected here-->
+             <div class="planet-grid" id="planet-grid"></div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 Cosmos Explorer.| Israel Santos - WDD231 | All rights reserved.</p>
+        <p> 
+            <a href="#"> Video Demonstration</a>
+        </p>
+    </footer>
+
+<!-- JavaScript -->
+<script  type="module" src="scripts/main.js"></script>
+
+
+    
+</body>
+</html>
