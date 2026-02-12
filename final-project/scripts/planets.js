@@ -1,7 +1,3 @@
-// ================================
-// PLANET DATA SERVICE
-// ================================
-
 export async function getPlanets() {
   try {
     const response = await fetch('./data/planets.json');
@@ -12,13 +8,15 @@ export async function getPlanets() {
 
     const data = await response.json();
 
-    // Normalizamos los datos por seguridad
-    return data.map(planet => ({
+     return data.map(planet => ({
+      id: planet.id,
       name: planet.name,
       description: planet.description,
+      gravity: planet.gravity,
+      meanRadius: planet.meanRadius,
       moons: planet.moons ?? 0,
-      image: planet.image ?? '',
-      distance: planet.distance ?? 'Unknown'
+      distance: planet.distance ?? 'Unknown',
+      image: planet.image || 'images/placeholder.jpg'
     }));
 
   } catch (error) {

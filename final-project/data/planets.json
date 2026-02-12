@@ -5,6 +5,8 @@
     "gravity": 9.8,
     "meanRadius": 6371,
     "moons": 1,
+    "distance": "149.6 million km",
+    "image": "images/earth.jpg",
     "description": "The only known planet to support life."
   },
   {
@@ -13,6 +15,8 @@
     "gravity": 3.71,
     "meanRadius": 3389,
     "moons": 2,
+    "distance": "227.9 million km",
+    "image": "images/mars.jpg",
     "description": "Known as the Red Planet."
   }
 ]

@@ -4,9 +4,11 @@
 .planet-card {
   background-color: var(--bg-section);
   border: 1px solid var(--border-soft);
-  border-radius: 8px;
+  border-radius: 12px;
   padding: 1.25rem;
+  overflow: hidden;
   text-align: center;
+  border: 1px solid var(--border-soft);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
@@ -16,10 +18,12 @@
   margin-top: 0;
   margin-bottom: 0.5rem;
   color: var(--accent);
+  font-size: 1.4rem;
 }
 
 .planet-card p {
-  font-size: 0.9rem;
+  margin: 0.5rem 0 1rem;
+  font-size: 0.95rem;
   color: var(--text-muted);
 }
 
@@ -40,25 +44,79 @@
 .planet-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1.5rem;
+  gap: 2rem;
   margin-top: 1.5rem;
+}
+
+.planet-content {
+  padding: 1.25rem;
 }
 
 
 
 .planet-card:hover {
-  transform: translateY(-4px);
+  transform: translateY(-6px);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+.planet-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: contain;      /* CLAVE */
+  background-color: #020617; /* fondo oscuro */
+  padding: 1rem;            /* aire alrededor del planeta */
+  display: block;
 }
 
 
 
 .planet-meta {
-  font-size: 0.9rem;
+   display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+  font-size: 0.85rem;
   color: var(--text-muted);
 }
 
 .planet-meta span {
   display: block;
   margin-bottom: 0.35rem;
+  font-size: 0.85rem;
+}
+.planet-card > *:not(img) {
+  padding: 1.2rem 1.4rem; 
+}
+
+.planet-btn {
+  margin-top: 1rem;
+  background-color: var(--accent);
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.planet-btn:hover {
+  opacity: 0.9;
+}
+
+.planet-detail-card {
+  max-width: 900px;
+  margin: 2rem auto;
+  text-align: center;
+}
+
+.planet-detail-card img {
+  width: 320px;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 1.5rem;
+}
+
+.planet-detail-card ul {
+  list-style: none;
+  padding: 0;
 }
