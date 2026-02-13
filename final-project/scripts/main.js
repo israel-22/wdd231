@@ -1,5 +1,7 @@
 import { getPlanets } from "./planets.js";
 import { setSelectedPlanet } from "./storage.js";
+import { getApod } from "./nasa.js";
+
 
 let grid;
 
@@ -26,6 +28,26 @@ async function init() {
 
   const planets = await getPlanets();
   renderPlanets(planets);
+  loadNasaApod();
+  async function loadNasaApod() {
+  const container = document.querySelector("#nasa-apod");
+  if (!container) return;
+
+  const data = await getApod();
+
+  if (!data) {
+    container.innerHTML = "<p>NASA content unavailable.</p>";
+    return;
+  }
+
+  container.innerHTML = `
+    <img src="${data.url}" alt="${data.title}">
+    <h3>${data.title}</h3>
+    <p>${data.explanation}</p>
+  `;
+}
+
+
 }
 
 // === Render cards ===
@@ -60,4 +82,5 @@ function renderPlanets(planets) {
 
     grid.appendChild(card);
   });
+  
 }
