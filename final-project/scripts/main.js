@@ -1,14 +1,11 @@
 import { getPlanets } from "./planets.js";
-import { saveSelectedPlanet } from "./storage.js";
-
-
-console.log("API planets loaded");
+import { setSelectedPlanet } from "./storage.js";
 
 let grid;
 
 document.addEventListener("DOMContentLoaded", init);
 
-// MOBILE NAVIGATION
+// === Mobile navigation ===
 function setupMobileMenu() {
   const toggleButton = document.querySelector(".menu-toggle");
   const nav = document.querySelector(".main-nav");
@@ -17,11 +14,10 @@ function setupMobileMenu() {
 
   toggleButton.addEventListener("click", () => {
     nav.classList.toggle("open");
-
-    const expanded = toggleButton.getAttribute("aria-expanded") === "true";
-    toggleButton.setAttribute("aria-expanded", !expanded);
   });
 }
+
+// === Init ===
 async function init() {
   grid = document.querySelector("#planet-grid");
   if (!grid) return;
@@ -30,9 +26,9 @@ async function init() {
 
   const planets = await getPlanets();
   renderPlanets(planets);
-  setupPlanetLinks();
 }
 
+// === Render cards ===
 function renderPlanets(planets) {
   grid.innerHTML = "";
 
@@ -42,45 +38,26 @@ function renderPlanets(planets) {
 
     card.innerHTML = `
       <h3>${planet.name}</h3>
-      <img 
-        src="${planet.image || "images/placeholder.jpg"}"
+      <img
+        src="${planet.image}"
         alt="${planet.name} planet"
         loading="lazy"
-        onerror="this.src='images/placeholder.jpg'">
+        onerror="this.src='images/placeholder.jpg'"
+      >
       <p>${planet.description}</p>
       <span><strong>Moons:</strong> ${planet.moons}</span>
       <span><strong>Distance:</strong> ${planet.distance}</span>
-       <button class="planet-btn" data-id="${planet.id}">
-    View planet
-  </button>
+      <button class="planet-btn" data-id="${planet.id}">
+        View planet
+      </button>
     `;
 
-    card.addEventListener("click", () => {
-  localStorage.setItem("selectedPlanet", planet.id);
-  window.location.href = "planets.html";
-});
-   
+    const button = card.querySelector(".planet-btn");
+    button.addEventListener("click", () => {
+      setSelectedPlanet(planet.id);
+      window.location.href = "planets.html";
+    });
 
     grid.appendChild(card);
   });
 }
-
-function setupPlanetLinks() {
-  const buttons = document.querySelectorAll(".planet-btn");
-
-  buttons.forEach(btn => {
-    btn.addEventListener("click", () => {
-      const planetId = btn.dataset.id;
-      localStorage.setItem("selectedPlanet", planetId);
-      window.location.href = "planets.html";
-    });
-  });
-}
-btn.addEventListener("click", () => {
-  saveSelectedPlanet(btn.dataset.id);
-  window.location.href = "planets.html";
-});
-
-
-
-export { init };

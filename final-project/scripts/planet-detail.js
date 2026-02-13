@@ -1,5 +1,5 @@
 import { getPlanets } from "./planets.js";
-import { getSelectedPlanet } from "./storage.js";
+import { getSelectedPlanet, savePlanet } from "./storage.js";
 
 document.addEventListener("DOMContentLoaded", init);
 
@@ -23,12 +23,17 @@ async function init() {
   }
 
   renderPlanet(container, planet);
+  savePlanet(planet); // ✅ aquí SÍ tiene sentido
 }
 
 function renderPlanet(container, planet) {
   container.innerHTML = `
     <article class="planet-detail-card">
-      <img src="${planet.image}" alt="${planet.name}">
+      <img
+        src="${planet.image}"
+        alt="${planet.name}"
+        onerror="this.src='images/placeholder.jpg'"
+      >
       <h2>${planet.name}</h2>
       <p>${planet.description}</p>
 

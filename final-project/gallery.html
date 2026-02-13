@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <title>Cosmos Explorer | Gallery</title>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="Explore the solar system and discover curious facts about planets using real scientific data."
+    />
+    <meta name="author" content="Israel Santos" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles/base.css" />
+    <link rel="stylesheet" href="styles/layout.css" />
+    <link rel="stylesheet" href="styles/components.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="header-content">
+        <h1>Cosmos Explorer</h1>
+        <nav class="main-nav">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="planets.html">Planets</a></li>
+            <li><a href="gallery.html" aria-current="page">Gallery</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="planet-section">
+        <h2>Saved Planets
+            <span id="planet-count">0</span>
+        </h2>
+        <p>Your personal collection of explored planets.</p>
+
+        <!-- Dynamic gallery -->
+        <div id="gallery-grid" class="planet-grid"></div>
+
+        <!-- Empty message -->
+        <p id="empty-message" class="empty-message hidden">
+          No planets saved yet. Explore the solar system 🌌
+        </p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 Cosmos Explorer.| Israel Santos - WDD231 | All rights reserved.</p>
+        <p> 
+            <a href="#"> Video Demonstration</a>
+        </p>
+    </footer>
+
+    <script type="module" src="scripts/gallery.js"></script>
+  </body>
+</html>
