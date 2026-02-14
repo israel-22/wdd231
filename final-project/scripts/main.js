@@ -2,7 +2,6 @@ import { getPlanets } from "./planets.js";
 import { setSelectedPlanet } from "./storage.js";
 import { getApod } from "./nasa.js";
 
-
 let grid;
 
 document.addEventListener("DOMContentLoaded", init);
@@ -26,10 +25,17 @@ async function init() {
 
   setupMobileMenu();
 
+  renderPlanetSkeletons(6);
+
   const planets = await getPlanets();
   renderPlanets(planets);
+
   loadNasaApod();
-  async function loadNasaApod() {
+}
+
+
+// === NASA APOD ===
+async function loadNasaApod() {
   const container = document.querySelector("#nasa-apod");
   if (!container) return;
 
@@ -39,14 +45,51 @@ async function init() {
     container.innerHTML = "<p>NASA content unavailable.</p>";
     return;
   }
-
+if (data.media_type === "image") {
+   container.classList.remove("apod-loading");
+ container.innerHTML = `
+  <div class="apod">
+    <div class="apod-media">
+      <img
+        src="${data.url}"
+        alt="${data.title}"
+        loading="lazy"
+      >
+    </div>
+    <div class="apod-overlay"></div>
+    <div class="apod-content">
+      <h3 class="apod-title">${data.title}</h3>
+      <p class="apod-text">${data.explanation}</p>
+      <span class="apod-source">NASA · Astronomy Picture of the Day</span>
+      <span class="apod-source">
+          NASA · APOD · ${data.date}
+          ${data.copyright ? `· © ${data.copyright}` : ""}
+        </span>
+    </div>
+  </div>
+`;
+} else {
   container.innerHTML = `
-    <img src="${data.url}" alt="${data.title}">
-    <h3>${data.title}</h3>
-    <p>${data.explanation}</p>
+    <div class="apod apod-video">
+      <div class="apod-content">
+        <h3 class="apod-title">${data.title}</h3>
+        <p class="apod-text">
+          Today's Astronomy Picture of the Day is a video.
+        </p>
+        <a class="apod-source" href="${data.url}" target="_blank" rel="noopener">
+          Watch on NASA
+        </a>
+      </div>
+    </div>
   `;
 }
+const img = container.querySelector("img");
 
+if (img) {
+  img.addEventListener("load", () => {
+    img.classList.add("loaded");
+  });
+}
 
 }
 
@@ -75,12 +118,43 @@ function renderPlanets(planets) {
     `;
 
     const button = card.querySelector(".planet-btn");
+
+    // === Focus mode ===
+    card.addEventListener("mouseenter", () => {
+      grid.classList.add("focus-mode");
+      card.classList.add("is-focused");
+    });
+
+    card.addEventListener("mouseleave", () => {
+      grid.classList.remove("focus-mode");
+      card.classList.remove("is-focused");
+    });
+
+    // === Click ===
     button.addEventListener("click", () => {
-      setSelectedPlanet(planet.id);
-      window.location.href = "planets.html";
+      card.classList.add("is-focused");
+      setTimeout(() => {
+        setSelectedPlanet(planet.id);
+        window.location.href = "planets.html";
+      }, 200);
     });
 
     grid.appendChild(card);
   });
-  
+}
+function renderPlanetSkeletons(count = 6) {
+  grid.innerHTML = "";
+
+  for (let i = 0; i < count; i++) {
+    const skeleton = document.createElement("article");
+    skeleton.classList.add("planet-skeleton");
+
+    skeleton.innerHTML = `
+      <div class="planet-skeleton-img"></div>
+      <div class="planet-skeleton-line"></div>
+      <div class="planet-skeleton-line short"></div>
+    `;
+
+    grid.appendChild(skeleton);
+  }
 }

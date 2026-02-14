@@ -4,12 +4,16 @@
 .planet-card {
   background-color: var(--bg-section);
   border: 1px solid var(--border-soft);
-  border-radius: 12px;
-  padding: 1.25rem;
-  overflow: hidden;
   text-align: center;
-  border: 1px solid var(--border-soft);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  position: relative;
+  border-radius: 16px;
+  padding: 1.2rem;
+  background: #020617;
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
+  overflow: hidden;
 }
 
 
@@ -47,28 +51,48 @@
   gap: 2rem;
   margin-top: 1.5rem;
 }
+.planet-grid.focus-mode .planet-card {
+  opacity: 0.45;
+  filter: blur(1.5px) saturate(0.8);
+  transform: scale(0.98);
+}
+
+.planet-grid.focus-mode .planet-card.is-focused {
+  opacity: 1;
+  filter: none;
+  transform: scale(1.03);
+  z-index: 2;
+}
 
 .planet-content {
   padding: 1.25rem;
 }
 
 
-
 .planet-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+  transform: translateY(-8px) scale(1.01);
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.55),
+    0 0 0 1px rgba(56, 189, 248, 0.25);
+  border-color: rgba(56, 189, 248, 0.4);
 }
+
 
 .planet-card img {
   width: 100%;
   height: 220px;
-  object-fit: contain;      /* CLAVE */
-  background-color: #020617; /* fondo oscuro */
-  padding: 1rem;            /* aire alrededor del planeta */
+  object-fit: contain;      
+  background-color: #020617; 
+  padding: 1rem;           
   display: block;
+  border-radius: 12px;
+  transition: transform 0.5s ease, filter 0.5s ease;
 }
 
-
+.planet-card:hover img {
+  transform: scale(1.06);
+  filter: saturate(1.1) contrast(1.05);
+}
 
 .planet-meta {
    display: grid;
@@ -90,17 +114,28 @@
 .planet-btn {
   margin-top: 1rem;
   background-color: var(--accent);
-  color: #fff;
-  border: none;
+  color: #070707;
+  border: 1px solid rgba(56, 189, 248, 0.3);
   padding: 0.6rem 1.2rem;
   border-radius: 6px;
   font-weight: 600;
   cursor: pointer;
+  
 }
 
-.planet-btn:hover {
-  opacity: 0.9;
+
+
+.planet-card:hover .planet-btn {
+  background: linear-gradient(
+    135deg,
+    rgba(56, 189, 248, 0.2),
+    rgba(14, 165, 233, 0.35)
+  );
+  color: #e0f2fe;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(56, 189, 248, 0.35);
 }
+
 
 .planet-detail-card {
   max-width: 900px;
@@ -129,4 +164,392 @@
 
 .hidden {
   display: none;
+}
+
+.planet-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at top,
+    rgba(56, 189, 248, 0.12),
+    transparent 60%
+  );
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+
+.planet-card:hover::after {
+  opacity: 1;
+}
+
+
+
+/* ================================
+   NASA APOD HERO
+================================ */
+
+.nasa-card {
+  position: relative;
+  margin: 2.5rem 0 3.5rem;
+  border-radius: 16px;
+  overflow: hidden;
+  background-color: #020617;
+  border: 1px solid var(--border-soft);
+  min-height: 420px;
+
+  display: flex;
+  align-items: flex-end;
+}
+
+.nasa-card img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+
+.nasa-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(2, 6, 23, 0.85),
+    rgba(2, 6, 23, 0.3),
+    rgba(2, 6, 23, 0.1)
+  );
+  z-index: 2;
+}
+
+
+.nasa-content {
+  position: relative;
+  z-index: 3;
+  padding: 2rem 2.5rem;
+  max-width: 720px;
+}
+
+.nasa-content h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.6rem;
+  color: var(--accent);
+}
+
+.nasa-content p {
+  margin: 0.5rem 0 0;
+  font-size: 0.95rem;
+  color: var(--text-main);
+  line-height: 1.5;
+}
+
+.nasa-content small {
+  display: block;
+  margin-top: 0.75rem;
+  color: var(--text-muted);
+  font-size: 0.8rem;
+}
+
+
+.nasa-card.video {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nasa-card.video p {
+  padding: 2rem;
+  color: var(--text-muted);
+  text-align: center;
+  font-size: 1rem;
+}
+/* ================================
+   NASA APOD BLOCK
+================================ */
+.apod {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  margin: 2.5rem 0 3.5rem;
+  min-height: 420px;
+  background-color: #020617;
+  border: 1px solid var(--border-soft);
+}
+
+/* Imagen de fondo */
+.apod-media {
+  position: relative;
+  inset: 0;
+}
+
+.apod-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+    object-position: center center;
+}
+
+/* Overlay para contraste */
+.apod-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(2, 6, 23, 0.35),
+    rgba(2, 6, 23, 0.9)
+  );
+}
+
+/* Contenido */
+.apod-content {
+  position: relative;
+  z-index: 2;
+  padding: 2.5rem;
+  max-width: 650px;
+}
+
+.apod-title {
+  font-size: 1.8rem;
+  margin: 0 0 1rem;
+  color: var(--accent);
+}
+
+.apod-text {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+}
+
+.apod-source {
+  display: inline-block;
+  margin-top: 1.5rem;
+  font-size: 0.8rem;
+  opacity: 0.7;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+/* ================================
+   APOD – RESPONSIVE
+================================ */
+@media (max-width: 768px) {
+  .apod {
+    min-height: 360px;
+  }
+
+  .apod-content {
+    padding: 1.75rem;
+  }
+
+  .apod-title {
+    font-size: 1.5rem;
+  }
+}
+
+/* ================================
+   APOD ANIMATION
+================================ */
+
+
+.apod {
+  opacity: 0;
+  transform: translateY(24px);
+  animation: apodFadeIn 1s ease-out forwards;
+  animation: fadeUp 0.9s ease-out both;
+}
+
+/* ================================
+   APOD LAZY LOAD EFFECT
+================================ */
+
+.apod-media img {
+  filter: blur(18px);
+  transform: scale(1.05);
+  transition:
+    filter 1.2s ease,
+    transform 1.2s ease;
+    opacity: 0;
+  transform: scale(1.08);
+  transition: opacity 0.8s ease, transform 1.2s ease;
+}
+
+
+.apod-media img.loaded {
+  opacity: 1;
+  filter: blur(0);
+  transform: scale(1);
+}
+.apod-loading {
+  min-height: 420px;
+  border-radius: 16px;
+  border: 1px solid var(--border-soft);
+  background: linear-gradient(
+    110deg,
+    #020617 40%,
+    #0b122f 50%,
+    #020617 60%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.4s infinite linear;
+}
+
+@keyframes shimmer {
+  to {
+    background-position: -200% 0;
+  }
+}
+
+
+/* ================================
+   APOD PLACEHOLDER
+================================ */
+
+.apod-media::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    110deg,
+    #020617 25%,
+    #0b122f 37%,
+    #020617 63%
+  );
+  background-size: 200% 100%;
+  animation: apod-shimmer 1.6s infinite linear;
+  z-index: 0;
+}
+
+/* Animación shimmer */
+@keyframes apod-shimmer {
+  to {
+    background-position-x: -200%;
+  }
+}
+
+/* Cuando la imagen ya cargó, ocultamos placeholder */
+.apod-media img.loaded + .apod-overlay,
+.apod-media img.loaded {
+  position: relative;
+  z-index: 2;
+}
+
+.apod-title,
+.apod-text,
+.apod-source {
+  opacity: 0;
+  animation: fadeUp 0.8s ease-out forwards;
+}
+
+.apod-title {
+  animation-delay: 0.25s;
+}
+
+.apod-text {
+  animation-delay: 0.4s;
+}
+
+.apod-source {
+  animation-delay: 0.6s;
+}
+
+
+@keyframes apodFadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.apod-media img {
+  animation: apodZoom 18s ease-in-out infinite alternate;
+}
+
+@keyframes apodZoom {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.06);
+  }
+}
+@media (hover: hover) {
+  .apod:hover .apod-media img {
+    transform: scale(1.1);
+  }
+
+  .apod-media img {
+    transition: transform 6s ease;
+  }
+}
+.apod-content {
+  animation: contentFade 1.2s ease-out forwards;
+  animation-delay: 0.3s;
+  opacity: 0;
+}
+
+@keyframes contentFade {
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes zoomFade {
+  from {
+    opacity: 0;
+    transform: scale(1.08);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+/* ================================
+   Planet Skeleton Loader
+================================ */
+
+.planet-skeleton {
+  border-radius: 14px;
+  padding: 1rem;
+  background: #020617;
+  border: 1px solid var(--border-soft);
+  animation: pulse 1.4s ease-in-out infinite;
+}
+
+.planet-skeleton-img {
+  width: 100%;
+  height: 160px;
+  border-radius: 10px;
+  background: #0b122f;
+  margin-bottom: 1rem;
+}
+
+.planet-skeleton-line {
+  height: 14px;
+  border-radius: 6px;
+  background: #0b122f;
+  margin-bottom: 0.6rem;
+}
+
+.planet-skeleton-line.short {
+  width: 60%;
+}
+
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.55; }
+  100% { opacity: 1; }
 }

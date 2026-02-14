@@ -34,25 +34,44 @@
     </div>
   </header>
     <main>
-        <section id ="planets" class="planet-section">
-            <h2>NASA - Astronomy Picture of the Day</h2>
-            <p>
-                Discover planets, extreme conditions, and real images from space
-                using scientific data and NASA resources.
-                 Uncover the mysteries of our cosmic neighborhood and learn about the wonders of the solar system.
-            </p>
-            <div id="nasa-apod" class="nasa-card">
-              <p>Loading NASA image...</p>
-            </div>
-            <!-- Dynamic planets cards will be injected here-->
-             <div class="planet-grid" id="planet-grid"></div>
-        </section>
-    </main>
+  <section id="planets" class="planet-section">
+    <h2>NASA – Astronomy Picture of the Day</h2>
+
+    <p>
+      Discover planets, extreme conditions, and real images from space
+      using scientific data and NASA resources.
+      Uncover the mysteries of our cosmic neighborhood and learn about the wonders of the solar system.
+    </p>
+
+   <div id="nasa-apod" class="apod">
+  
+  <div class="apod-media">
+  <img>
+  </div>
+
+  <div class="apod-overlay"></div>
+
+ 
+  <div class="apod-content">
+    <h3 class="apod-title">Loading NASA content...</h3>
+    <p class="apod-text">
+      Fetching today’s astronomy picture from NASA.
+    </p>
+    <span class="apod-source">Source: NASA APOD</span>
+  </div>
+</div>
+
+
+    <!-- Dynamic planets cards -->
+    <div class="planet-grid" id="planet-grid"></div>
+  </section>
+</main>
+
 
     <footer class="site-footer">
         <p>&copy; 2026 Cosmos Explorer.| Israel Santos - WDD231 | All rights reserved.</p>
         <p> 
-            <a href="#"> Video Demonstration</a>
+            <a href="https://www.youtube.com/watch?v=s_qhk_sqr5w&list=RDs_qhk_sqr5w&start_radio=1"> Video Demonstration</a>
         </p>
     </footer>
 

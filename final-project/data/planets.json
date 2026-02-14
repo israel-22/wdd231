@@ -18,5 +18,15 @@
     "distance": "227.9 million km",
     "image": "images/mars.jpg",
     "description": "Known as the Red Planet."
+  },
+  {"id": "saturn",
+    "name": "Saturn",
+    "gravity": 10.44,
+    "meanRadius": 58232,
+    "moons": 82,
+    "distance": "1.4 billion km",
+    "image": "images/saturn.jpg",
+    "description": "Famous for its stunning ring system."
+
   }
 ]

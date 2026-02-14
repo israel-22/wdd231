@@ -23,7 +23,7 @@ async function init() {
   }
 
   renderPlanet(container, planet);
-  savePlanet(planet); // ✅ aquí SÍ tiene sentido
+  savePlanet(planet); 
 }
 
 function renderPlanet(container, planet) {
