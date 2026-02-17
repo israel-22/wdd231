@@ -23,26 +23,38 @@ async function init() {
   }
 
   renderPlanet(container, planet);
-  savePlanet(planet); 
+  savePlanet(planet);
 }
 
 function renderPlanet(container, planet) {
   container.innerHTML = `
-    <article class="planet-detail-card">
+    <div class="planet-detail-card">
       <img
         src="${planet.image}"
         alt="${planet.name}"
         onerror="this.src='images/placeholder.jpg'"
       >
-      <h2>${planet.name}</h2>
-      <p>${planet.description}</p>
+      <div class="planet-detail-content">
+        <h2>${planet.name}</h2>
+        <p>${planet.description}</p>
 
-      <ul>
-        <li><strong>Gravity:</strong> ${planet.gravity} m/s²</li>
-        <li><strong>Radius:</strong> ${planet.meanRadius} km</li>
-        <li><strong>Moons:</strong> ${planet.moons}</li>
-        <li><strong>Distance:</strong> ${planet.distance}</li>
-      </ul>
-    </article>
+        <div class="planet-detail-meta">
+          <span><strong>Gravity:</strong> ${planet.gravity} m/s²</span>
+          <span><strong>Radius:</strong> ${planet.meanRadius} km</span>
+          <span><strong>Moons:</strong> ${planet.moons}</span>
+          <span><strong>Distance:</strong> ${planet.distance}</span>
+        </div>
+
+        <div class="planet-fun-fact">
+          <p><strong>Fun Fact:</strong> ${
+            planet.funFact || "No additional info available."
+          }</p>
+        </div>
+
+        <button class="planet-detail-btn" onclick="window.history.back();">
+          ← Back to Planets
+        </button>
+      </div>
+    </div>
   `;
 }

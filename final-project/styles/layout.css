@@ -2,34 +2,93 @@
    HEADER & NAVIGATION
 ================================ */
 .site-header {
+  background-color: var(--bg-main);
   border-bottom: 1px solid var(--border-soft);
 }
 
 .header-content {
   max-width: 1100px;
   margin: 0 auto;
-  padding: 1.5rem;
+  padding: 1.25rem 1.5rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
+/* Marca / logo */
+.site-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.site-logo {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+}
+
+.site-brand h1 {
+  font-size: 1.4rem;
+  margin: 0;
+  letter-spacing: 0.5px;
+}
+
+/* Navegación */
 .main-nav ul {
   list-style: none;
   display: flex;
-  gap: 1.5rem;
+  gap: 1.75rem;
   margin: 0;
   padding: 0;
 }
 
+.main-nav a {
+  position: relative;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-main);
+  text-decoration: none;
+  padding: 0.25rem 0;
+  transition: color 0.25s ease;
+}
+
+/* Línea inferior elegante */
+.main-nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background-color: var(--accent);
+  transition: width 0.25s ease;
+}
+
+.main-nav a:hover {
+  color: var(--accent);
+}
+
+.main-nav a:hover::after,
+.main-nav a[aria-current="page"]::after {
+  width: 100%;
+}
+
+/* Estado activo */
+.main-nav a[aria-current="page"] {
+  color: var(--accent);
+}
+
+/* Botón menú móvil */
 .menu-toggle {
   display: none;
   background: none;
   border: none;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   color: var(--text-main);
   cursor: pointer;
 }
+
 
 /* ================================
    MAIN CONTENT
@@ -68,12 +127,32 @@ main {
    FOOTER
 ================================ */
 .site-footer {
+  margin-top: auto; /* CLAVE para que se vaya al fondo */
+  background-color: var(--bg-section);
   border-top: 1px solid var(--border-soft);
   text-align: center;
-  padding: 1.5rem;
+  padding: 1.75rem 1.5rem;
   font-size: 0.85rem;
   color: var(--text-muted);
 }
+
+.site-footer p {
+  margin: 0.3rem 0;
+}
+
+.site-footer a {
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: color 0.25s ease, border-color 0.25s ease;
+}
+
+.site-footer a:hover {
+  color: #ffe08a;
+  border-bottom-color: var(--accent);
+}
+
 
 /* ================================
    RESPONSIVE

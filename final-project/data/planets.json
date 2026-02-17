@@ -1,5 +1,4 @@
 [
-
   {
     "id": "mercury",
     "name": "Mercury",
@@ -8,7 +7,8 @@
     "moons": 0,
     "distance": "57.9 million km",
     "image": "https://content.nationalgeographic.com.es/medio/2022/07/31/el-planeta-mercurio_c7bafef8_1280x720.jpg",
-    "description": "The smallest and fastest planet in the Solar System."
+    "description": "The smallest and fastest planet in the Solar System.",
+    "funFact": "Mercury has almost no atmosphere, so temperatures vary wildly between day and night."
   },
   {
     "id": "venus",
@@ -18,7 +18,8 @@
     "moons": 0,
     "distance": "108.2 million km",
     "image": "https://content.nationalgeographic.com.es/medio/2022/07/31/el-planeta-venus_de3a3995_1280x1280.jpg",
-    "description": "A planet with extreme temperatures and thick clouds."
+    "description": "A planet with extreme temperatures and thick clouds.",
+    "funFact": "Venus rotates backward compared to most planets, meaning the Sun rises in the west."
   },
   {
     "id": "earth",
@@ -28,7 +29,8 @@
     "moons": 1,
     "distance": "149.6 million km",
     "image": "images/earth.jpg",
-    "description": "The only known planet to support life."
+    "description": "The only known planet to support life.",
+    "funFact": "Earth is the only planet with liquid water on its surface and a breathable atmosphere."
   },
   {
     "id": "mars",
@@ -38,7 +40,8 @@
     "moons": 2,
     "distance": "227.9 million km",
     "image": "images/mars.jpg",
-    "description": "Known as the Red Planet."
+    "description": "Known as the Red Planet.",
+    "funFact": "Mars has the largest volcano in the solar system, Olympus Mons."
   },
   {
     "id": "jupiter",
@@ -48,7 +51,8 @@
     "moons": 95,
     "distance": "778.5 million km",
     "image": "https://spaceplace.nasa.gov/all-about-jupiter/sp/jupiter_auroras.sp.jpg",
-    "description": "The largest planet in the Solar System."
+    "description": "The largest planet in the Solar System.",
+    "funFact": "Jupiter's Great Red Spot is a storm larger than Earth and has been raging for centuries."
   },
   {
     "id": "saturn",
@@ -58,7 +62,8 @@
     "moons": 82,
     "distance": "1.4 billion km",
     "image": "images/saturn.jpg",
-    "description": "Famous for its stunning ring system."
+    "description": "Famous for its stunning ring system.",
+    "funFact": "Saturn's rings are made mostly of ice and rock and extend thousands of kilometers."
   },
   {
     "id": "uranus",
@@ -68,7 +73,8 @@
     "moons": 27,
     "distance": "2.9 billion km",
     "image": "https://elcomercio.pe/resizer/zCxXWf7vaeA03kSiuMc-qv-pzm4=/1200x675/smart/filters:format(jpeg):quality(75)/arc-anglerfish-arc2-prod-elcomercio.s3.amazonaws.com/public/QA6RIW5S35BADKAIFRRY3CJGVQ.jpg",
-    "description": "An ice giant that rotates on its side."
+    "description": "An ice giant that rotates on its side.",
+    "funFact": "Uranus' axis is tilted over 90 degrees, making it appear to roll along its orbit."
   },
   {
     "id": "neptune",
@@ -78,7 +84,8 @@
     "moons": 14,
     "distance": "4.5 billion km",
     "image": "https://content.nationalgeographic.com.es/medio/2022/08/03/el-planeta-neptuno_bfb396f8_1280x1278.jpg",
-    "description": "The windiest planet in the Solar System."
+    "description": "The windiest planet in the Solar System.",
+    "funFact": "Neptune can produce winds exceeding 2,000 km/h, faster than the speed of sound on Earth."
   },
   {
     "id": "pluto",
@@ -88,7 +95,8 @@
     "moons": 5,
     "distance": "5.9 billion km",
     "image": "https://upload.wikimedia.org/wikipedia/commons/a/a7/Pluto-01_Stern_03_Pluto_Color_TXT.jpg",
-    "description": "A dwarf planet located in the Kuiper Belt."
+    "description": "A dwarf planet located in the Kuiper Belt.",
+    "funFact": "Pluto has a heart-shaped glacier known as Tombaugh Regio."
   },
   {
     "id": "ceres",
@@ -98,7 +106,8 @@
     "moons": 0,
     "distance": "413 million km",
     "image": "https://e01-elmundo.uecdn.es/assets/multimedia/imagenes/2022/03/25/16482285252895.jpg",
-    "description": "The largest object in the asteroid belt."
+    "description": "The largest object in the asteroid belt.",
+    "funFact": "Ceres may have a subsurface ocean and shows signs of water vapor."
   },
   {
     "id": "eris",
@@ -108,7 +117,8 @@
     "moons": 1,
     "distance": "10.1 billion km",
     "image": "https://static.dw.com/image/67418714_804.jpg",
-    "description": "A distant dwarf planet larger than Pluto."
+    "description": "A distant dwarf planet larger than Pluto.",
+    "funFact": "Eris has one known moon called Dysnomia and takes 557 years to orbit the Sun."
   },
   {
     "id": "haumea",
@@ -118,7 +128,8 @@
     "moons": 2,
     "distance": "6.4 billion km",
     "image": "https://www.universosideral.com/wp-content/uploads/2021/04/haumea-planeta-enano.jpg",
-    "description": "A fast-spinning dwarf planet with an elongated shape."
+    "description": "A fast-spinning dwarf planet with an elongated shape.",
+    "funFact": "Haumea rotates so fast that it is stretched into an ellipsoid shape."
   },
   {
     "id": "makemake",
@@ -128,7 +139,8 @@
     "moons": 1,
     "distance": "6.8 billion km",
     "image": "https://es.gizmodo.com/app/uploads/2025/09/Diseno-sin-titulo-32-12.jpg",
-    "description": "A bright dwarf planet in the Kuiper Belt."
+    "description": "A bright dwarf planet in the Kuiper Belt.",
+    "funFact": "Makemake has no atmosphere, making its surface extremely cold."
   },
   {
     "id": "io",
@@ -138,7 +150,8 @@
     "moons": 0,
     "distance": "628 million km",
     "image": "https://media.istockphoto.com/id/488220116/es/foto/io-planeta.jpg?s=612x612&w=0&k=20&c=ne7yj8NNLDxDyxJUmTAiuHY8xC08O6VqxCEJP4BApuA=",
-    "description": "The most volcanically active body in the Solar System."
+    "description": "The most volcanically active body in the Solar System.",
+    "funFact": "Io has over 400 active volcanoes, some erupting lava hundreds of kilometers high."
   },
   {
     "id": "europa",
@@ -148,7 +161,8 @@
     "moons": 0,
     "distance": "628 million km",
     "image": "https://static-blogs.hoy.es/wp-content/uploads/sites/227/2020/04/Europa.jpg",
-    "description": "An icy moon with a possible subsurface ocean."
+    "description": "An icy moon with a possible subsurface ocean.",
+    "funFact": "Europa may have more water beneath its ice than all Earth's oceans combined."
   },
   {
     "id": "ganymede",
@@ -158,7 +172,8 @@
     "moons": 0,
     "distance": "628 million km",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Ganymede-moon.jpg/250px-Ganymede-moon.jpg",
-    "description": "The largest moon in the Solar System."
+    "description": "The largest moon in the Solar System.",
+    "funFact": "Ganymede has its own magnetic field, unique among moons in the Solar System."
   },
   {
     "id": "titan",
@@ -168,7 +183,8 @@
     "moons": 0,
     "distance": "1.4 billion km",
     "image": "https://imagenes.elpais.com/resizer/v2/2VVMKJL33ZZ7PRAL4BL4MY6RZQ.jpg?auth=1303efc4aed3edef2a958bd5a11bcb480c220d4b44c862f207468bfd66101589&width=980&height=980&smart=true",
-    "description": "A moon with lakes of liquid methane."
+    "description": "A moon with lakes of liquid methane.",
+    "funFact": "Titan is larger than Mercury and has lakes of liquid methane on its surface."
   },
   {
     "id": "triton",
@@ -178,7 +194,8 @@
     "moons": 0,
     "distance": "4.5 billion km",
     "image": "https://upload.wikimedia.org/wikipedia/commons/d/db/Neptune%E2%80%99s_Moon_Triton_Fosters_Rare_Icy_Union_%28gemini1903a%29_%28square_crop%29.jpg",
-    "description": "A moon with geysers of nitrogen ice."
+    "description": "A moon with geysers of nitrogen ice.",
+    "funFact": "Triton orbits Neptune backward, suggesting it was captured by the planet."
   },
   {
     "id": "enceladus",
@@ -188,7 +205,8 @@
     "moons": 0,
     "distance": "1.4 billion km",
     "image": "https://upload.wikimedia.org/wikipedia/commons/8/83/PIA17202_-_Approaching_Enceladus.jpg",
-    "description": "An icy moon that ejects water vapor into space."
+    "description": "An icy moon that ejects water vapor into space.",
+    "funFact": "Enceladus has geysers that shoot water vapor hundreds of kilometers into space."
   },
   {
     "id": "callisto",
@@ -198,7 +216,8 @@
     "moons": 0,
     "distance": "628 million km",
     "image": "https://i.pinimg.com/564x/11/f4/48/11f4482e78b6b5c600ccd42c47547555.jpg",
-    "description": "A heavily cratered moon of Jupiter."
+    "description": "A heavily cratered moon of Jupiter.",
+    "funFact": "Callisto is one of the oldest landscapes in the Solar System."
   },
   {
     "id": "charon",
@@ -208,7 +227,8 @@
     "moons": 0,
     "distance": "5.9 billion km",
     "image": "https://cdn.mos.cms.futurecdn.net/VYD39HvzFHAEny3VwfFSSm.jpg",
-    "description": "The largest moon of Pluto."
+    "description": "The largest moon of Pluto.",
+    "funFact": "Charon has canyons that are up to 7-9 km deep."
   },
   {
     "id": "vesta",
@@ -218,68 +238,73 @@
     "moons": 0,
     "distance": "353 million km",
     "image": "https://upload.wikimedia.org/wikipedia/commons/1/14/Vesta_full_mosaic.jpg",
-    "description": "One of the largest asteroids in the Solar System."
+    "description": "One of the largest asteroids in the Solar System.",
+    "funFact": "Vesta has a giant crater called Rheasilvia nearly 500 km wide."
+  },
+  {
+    "id": "kepler-22b",
+    "name": "Kepler-22b",
+    "gravity": 9.8,
+    "meanRadius": 24600,
+    "moons": 0,
+    "distance": "620 light years",
+    "image": "https://i.redd.it/kepler-22b-is-an-exoplanet-that-might-be-covered-in-a-v0-o3wiamibb1ub1.png?width=1606&format=png&auto=webp&s=507e700012632d77cb0eb400bfd9b1bb7138f97a",
+    "description": "One of the first known exoplanets located in a habitable zone.",
+    "funFact": "Kepler-22b might have liquid water and Earth-like temperatures."
+  },
+  {
+    "id": "kepler-452b",
+    "name": "Kepler-452b",
+    "gravity": 19.6,
+    "meanRadius": 30500,
+    "moons": 0,
+    "distance": "1,400 light years",
+    "image": "https://www.imagenradio.com.mx/media/files/imagen_radio/images/kepler-452b-4000x2251-exoplanet-planet-space-stars-5493.jpg",
+    "description": "Often called Earth's cousin due to its size and orbit.",
+    "funFact": "Kepler-452b is considered the most Earth-like exoplanet discovered so far."
+  },
+  {
+    "id": "proxima-b",
+    "name": "Proxima Centauri b",
+    "gravity": 10.0,
+    "meanRadius": 7160,
+    "moons": 0,
+    "distance": "4.24 light years",
+    "image": "https://www.portalcienciayficcion.com/media/reviews/photos/original/ee/bc/ff/proxima-36-1520845865.jpg",
+    "description": "The closest known exoplanet to the Solar System.",
+    "funFact": "Proxima b orbits within the habitable zone of its star, Proxima Centauri."
+  },
+  {
+    "id": "trappist-1e",
+    "name": "TRAPPIST-1e",
+    "gravity": 9.1,
+    "meanRadius": 5790,
+    "moons": 0,
+    "distance": "39 light years",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/3/38/TRAPPIST-1e_artist_impression_2018.png",
+    "description": "A rocky exoplanet with potential for liquid water.",
+    "funFact": "TRAPPIST-1e may have a rocky surface with oceans under the atmosphere."
+  },
+  {
+    "id": "hd-189733b",
+    "name": "HD 189733 b",
+    "gravity": 21.0,
+    "meanRadius": 81000,
+    "moons": 0,
+    "distance": "64 light years",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/3/36/HD_189733b.jpg",
+    "description": "A gas giant known for its extreme blue color and glass rain.",
+    "funFact": "HD 189733 b has glass rain due to high-speed silicate particles in its atmosphere."
+  },
+  {
+    "id": "wasp-12b",
+    "name": "WASP-12b",
+    "gravity": 9.0,
+    "meanRadius": 98000,
+    "moons": 0,
+    "distance": "870 light years",
+    "image": "https://hips.hearstapps.com/hmg-prod/images/5120-wasp12b-1664181840.png?crop=0.9480337078651685xw:1xh;center,top&resize=640:*",
+    "description": "An ultra-hot gas giant being slowly destroyed by its star.",
+    "funFact": "WASP-12b is being pulled apart by its star's gravity, creating a comet-like tail."
   }
-  ,
-{
-  "id": "kepler-22b",
-  "name": "Kepler-22b",
-  "gravity": 9.8,
-  "meanRadius": 24600,
-  "moons": 0,
-  "distance": "620 light years",
-  "image": "https://i.redd.it/kepler-22b-is-an-exoplanet-that-might-be-covered-in-a-v0-o3wiamibb1ub1.png?width=1606&format=png&auto=webp&s=507e700012632d77cb0eb400bfd9b1bb7138f97a",
-  "description": "One of the first known exoplanets located in a habitable zone."
-},
-{
-  "id": "kepler-452b",
-  "name": "Kepler-452b",
-  "gravity": 19.6,
-  "meanRadius": 30500,
-  "moons": 0,
-  "distance": "1,400 light years",
-  "image": "https://www.imagenradio.com.mx/media/files/imagen_radio/images/kepler-452b-4000x2251-exoplanet-planet-space-stars-5493.jpg",
-  "description": "Often called Earth's cousin due to its size and orbit."
-},
-{
-  "id": "proxima-b",
-  "name": "Proxima Centauri b",
-  "gravity": 10.0,
-  "meanRadius": 7160,
-  "moons": 0,
-  "distance": "4.24 light years",
-  "image": "https://www.portalcienciayficcion.com/media/reviews/photos/original/ee/bc/ff/proxima-36-1520845865.jpg",
-  "description": "The closest known exoplanet to the Solar System."
-},
-{
-  "id": "trappist-1e",
-  "name": "TRAPPIST-1e",
-  "gravity": 9.1,
-  "meanRadius": 5790,
-  "moons": 0,
-  "distance": "39 light years",
-  "image": "https://upload.wikimedia.org/wikipedia/commons/3/38/TRAPPIST-1e_artist_impression_2018.png",
-  "description": "A rocky exoplanet with potential for liquid water."
-},
-{
-  "id": "hd-189733b",
-  "name": "HD 189733 b",
-  "gravity": 21.0,
-  "meanRadius": 81000,
-  "moons": 0,
-  "distance": "64 light years",
-  "image": "https://upload.wikimedia.org/wikipedia/commons/3/36/HD_189733b.jpg",
-  "description": "A gas giant known for its extreme blue color and glass rain."
-},
-{
-  "id": "wasp-12b",
-  "name": "WASP-12b",
-  "gravity": 9.0,
-  "meanRadius": 98000,
-  "moons": 0,
-  "distance": "870 light years",
-  "image": "https://hips.hearstapps.com/hmg-prod/images/5120-wasp12b-1664181840.png?crop=0.9480337078651685xw:1xh;center,top&resize=640:*",
-  "description": "An ultra-hot gas giant being slowly destroyed by its star."
-}
-
 ]
