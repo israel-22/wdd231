@@ -1,88 +1,109 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
-<head>
+  <head>
     <title>Cosmos Explorer | Solar System</title>
-    <meta charset="UTF-8">
-        <meta name="description" content="Explore the solar system and discover curious facts about planets using real scientific data.">
-        <meta name="author" content="Israel Santos">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-       
-        <!--Fonts-->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-       <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="Explore the solar system and discover curious facts about planets using real scientific data."
+    />
+    <meta name="author" content="Israel Santos" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-       <!-- Styles -->
-      <link rel="stylesheet" href="styles/base.css">
-      <link rel="stylesheet" href="styles/layout.css">   
-      <link rel="stylesheet" href="styles/components.css">   
-      <link rel="icon" href="favicon.ico">
-</head>
-<body>
-    <header class="site-header">
-    <div class="header-content">
-  <div class="site-brand">
-    <img src="images/nasa.png" alt="NASA logo" class="site-logo">
-    <h1>Cosmos Explorer</h1>
-  </div>
-      <button class="menu-toggle" aria-label="Open navigation menu">
-        ☰
-      </button>
-      <nav class="main-nav">
-        <ul>
-          <li><a href="index.html" aria-current="page">Home</a></li>
-          <li><a href="planets.html">Planets</a></li>
-          <li><a href="gallery.html">Gallery</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-    <main>
-  <section id="planets" class="planet-section">
-    <h2>NASA – Astronomy Picture of the Day</h2>
-
-    <p>
-      Discover planets, extreme conditions, and real images from space
-      using scientific data and NASA resources.
-      Uncover the mysteries of our cosmic neighborhood and learn about the wonders of the solar system.
-    </p>
-
-   <div id="nasa-apod" class="apod">
+    <!-- Open Graph / Social Sharing -->
+    <meta property="og:title" content="Cosmos Explorer" />
+    <meta
+      property="og:description"
+      content="Explore planets, data, and visuals of our solar system."
+    />
+    <meta property="og:image" content="https://israel-22.github.io/wdd231/images/nasa.png" />
+    <meta property="og:url" content="https://israel-22.github.io/wdd231/" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Cosmos Explorer">
+    <meta name="twitter:description" content="Explore planets, data, and visuals of our solar system.">
+    <meta name="twitter:image" content="https://israel-22.github.io/wdd231/images/nasa.png">
   
-  <div class="apod-media">
-  <img>
-  </div>
 
-  <div class="apod-overlay"></div>
+    <!--Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
 
- 
-  <div class="apod-content">
-    <h3 class="apod-title">Loading NASA content...</h3>
-    <p class="apod-text">
-      Fetching today’s astronomy picture from NASA.
-    </p>
-    <span class="apod-source">Source: NASA APOD</span>
-  </div>
-</div>
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles/base.css" />
+    <link rel="stylesheet" href="styles/layout.css" />
+    <link rel="stylesheet" href="styles/components.css" />
+    <link rel="icon" href="favicon.ico" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="header-content">
+        <div class="site-brand">
+          <img src="images/nasa.png" alt="NASA logo" class="site-logo" />
+          <h1>Cosmos Explorer</h1>
+        </div>
+        <button class="menu-toggle" aria-label="Open navigation menu">
+          ☰
+        </button>
+        <nav class="main-nav">
+          <ul>
+            <li><a href="index.html" aria-current="page">Home</a></li>
+            <li><a href="planets.html">Planets</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section id="planets" class="planet-section">
+        <h2>NASA – Astronomy Picture of the Day</h2>
 
+        <p>
+          Discover planets, extreme conditions, and real images from space using
+          scientific data and NASA resources. Uncover the mysteries of our
+          cosmic neighborhood and learn about the wonders of the solar system.
+        </p>
 
-    <!-- Dynamic planets cards -->
-    <div class="planet-grid" id="planet-grid"></div>
-  </section>
-</main>
+        <div id="nasa-apod" class="apod">
+          <div class="apod-media">
+            <img />
+          </div>
 
+          <div class="apod-overlay"></div>
+
+          <div class="apod-content">
+            <h3 class="apod-title">Loading NASA content...</h3>
+            <p class="apod-text">
+              Fetching today’s astronomy picture from NASA.
+            </p>
+            <span class="apod-source">Source: NASA APOD</span>
+          </div>
+        </div>
+
+        <!-- Dynamic planets cards -->
+        <div class="planet-grid" id="planet-grid"></div>
+      </section>
+    </main>
 
     <footer class="site-footer">
-        <p>&copy; 2026 Cosmos Explorer.| Israel Santos - WDD231 | All rights reserved.</p>
-        <p> 
-            <a href="https://drive.google.com/file/d/1bGpr2Ibqn25VUrotr-opF9cUCpSgVbS9/view?usp=sharing"> Video Demonstration</a>
-        </p>
+      <p>
+        &copy; 2026 Cosmos Explorer.| Israel Santos - WDD231 | All rights
+        reserved.
+      </p>
+      <p>
+        <a
+          href="https://drive.google.com/file/d/1bGpr2Ibqn25VUrotr-opF9cUCpSgVbS9/view?usp=sharing"
+        >
+          Video Demonstration</a
+        >
+      </p>
     </footer>
 
-<!-- JavaScript -->
-<script  type="module" src="scripts/main.js"></script>
-
-
-    
-</body>
+    <!-- JavaScript -->
+    <script type="module" src="scripts/main.js"></script>
+  </body>
 </html>
