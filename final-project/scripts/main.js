@@ -4,7 +4,22 @@ import { getApod } from "./nasa.js";
 
 let grid;
 
-document.addEventListener("DOMContentLoaded", init);
+document.addEventListener("DOMContentLoaded", async () => {
+  await loadNavbar();
+  init();
+});
+
+
+async function loadNavbar() {
+  const container = document.querySelector("#navbar");
+  if (!container) return;
+
+  const response = await fetch("components/navbar.html");
+  container.innerHTML = await response.text();
+
+  setupMobileMenu(); // 🔥 AQUÍ, no antes
+}
+
 
 // === Mobile navigation ===
 function setupMobileMenu() {
@@ -23,7 +38,6 @@ async function init() {
   grid = document.querySelector("#planet-grid");
   if (!grid) return;
 
-  setupMobileMenu();
 
   renderPlanetSkeletons(6);
 

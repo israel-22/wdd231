@@ -88,6 +88,13 @@
   color: var(--text-main);
   cursor: pointer;
 }
+.header-content {
+  position: relative;
+}
+.main-nav.open {
+  top: 100%;
+}
+
 
 
 /* ================================
